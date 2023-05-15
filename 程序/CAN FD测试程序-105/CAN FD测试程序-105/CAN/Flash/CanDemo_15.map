@@ -1,0 +1,1812 @@
+Component: Arm Compiler for Embedded 6.19 Tool: armlink [5e73cb00]
+
+==============================================================================
+
+Section Cross References
+
+    system_stm32f10x.o(.ARM.exidx.text.SystemInit) refers to system_stm32f10x.o(.text.SystemInit) for [Anonymous Symbol]
+    system_stm32f10x.o(.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data.SystemCoreClock) for SystemCoreClock
+    system_stm32f10x.o(.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.rodata.AHBPrescTable) for AHBPrescTable
+    system_stm32f10x.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    startup_stm32f10x_cl.o(RESET) refers to startup_stm32f10x_cl.o(STACK) for __initial_sp
+    startup_stm32f10x_cl.o(RESET) refers to startup_stm32f10x_cl.o(.text) for Reset_Handler
+    startup_stm32f10x_cl.o(.text) refers to system_stm32f10x.o(.text.SystemInit) for SystemInit
+    startup_stm32f10x_cl.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    main.o(.text.main) refers to app.o(.text.APP_Initialize) for APP_Initialize
+    main.o(.text.main) refers to app.o(.text.APP_Tasks) for APP_Tasks
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    app.o(.text.APP_LED_Clear) refers to stm32f10x_gpio.o(.text.GPIO_SetBits) for GPIO_SetBits
+    app.o(.ARM.exidx.text.APP_LED_Clear) refers to app.o(.text.APP_LED_Clear) for [Anonymous Symbol]
+    app.o(.text.APP_LED_Set) refers to stm32f10x_gpio.o(.text.GPIO_ResetBits) for GPIO_ResetBits
+    app.o(.ARM.exidx.text.APP_LED_Set) refers to app.o(.text.APP_LED_Set) for [Anonymous Symbol]
+    app.o(.text.APP_LED_Write) refers to app.o(.bss.i) for i
+    app.o(.text.APP_LED_Write) refers to stm32f10x_gpio.o(.text.GPIO_ResetBits) for GPIO_ResetBits
+    app.o(.text.APP_LED_Write) refers to stm32f10x_gpio.o(.text.GPIO_SetBits) for GPIO_SetBits
+    app.o(.ARM.exidx.text.APP_LED_Write) refers to app.o(.text.APP_LED_Write) for [Anonymous Symbol]
+    app.o(.text.APP_Initialize) refers to drv_spi.o(.text.DRV_SPI_Initialize) for DRV_SPI_Initialize
+    app.o(.text.APP_Initialize) refers to stm32f10x_rcc.o(.text.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    app.o(.text.APP_Initialize) refers to stm32f10x_gpio.o(.text.GPIO_PinRemapConfig) for GPIO_PinRemapConfig
+    app.o(.text.APP_Initialize) refers to stm32f10x_gpio.o(.text.GPIO_Init) for GPIO_Init
+    app.o(.text.APP_Initialize) refers to app.o(.bss.lastSwitchState) for lastSwitchState
+    app.o(.text.APP_Initialize) refers to app.o(.bss.appData) for appData
+    app.o(.ARM.exidx.text.APP_Initialize) refers to app.o(.text.APP_Initialize) for [Anonymous Symbol]
+    app.o(.text.APP_Tasks) refers to app.o(.bss.appData) for appData
+    app.o(.text.APP_Tasks) refers to stm32f10x_gpio.o(.text.GPIO_ResetBits) for GPIO_ResetBits
+    app.o(.text.APP_Tasks) refers to app.o(.text.APP_CANFDSPI_Init) for APP_CANFDSPI_Init
+    app.o(.text.APP_Tasks) refers to stm32f10x_gpio.o(.text.GPIO_SetBits) for GPIO_SetBits
+    app.o(.text.APP_Tasks) refers to app.o(.bss.txObj) for txObj
+    app.o(.text.APP_Tasks) refers to app.o(.bss.txd) for txd
+    app.o(.text.APP_Tasks) refers to app.o(.bss.i) for i
+    app.o(.text.APP_Tasks) refers to app.o(.data.delayCount) for delayCount
+    app.o(.text.APP_Tasks) refers to app.o(.bss.ledCount) for ledCount
+    app.o(.text.APP_Tasks) refers to app.o(.text.APP_ReceiveMessage_Tasks) for APP_ReceiveMessage_Tasks
+    app.o(.text.APP_Tasks) refers to app.o(.text.APP_PayLoad_Tasks) for APP_PayLoad_Tasks
+    app.o(.text.APP_Tasks) refers to app.o(.text.APP_TestRamAccess) for APP_TestRamAccess
+    app.o(.text.APP_Tasks) refers to app.o(.text.APP_TestRegisterAccess) for APP_TestRegisterAccess
+    app.o(.text.APP_Tasks) refers to stm32f10x_gpio.o(.text.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
+    app.o(.text.APP_Tasks) refers to app.o(.bss.lastSwitchState) for lastSwitchState
+    app.o(.text.APP_Tasks) refers to app.o(.text.APP_TransmitMessageQueue) for APP_TransmitMessageQueue
+    app.o(.text.APP_Tasks) refers to app.o(.bss.ledState) for ledState
+    app.o(.ARM.exidx.text.APP_Tasks) refers to app.o(.text.APP_Tasks) for [Anonymous Symbol]
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_Reset) for DRV_CANFDSPI_Reset
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEnable) for DRV_CANFDSPI_EccEnable
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_RamInit) for DRV_CANFDSPI_RamInit
+    app.o(.text.APP_CANFDSPI_Init) refers to app.o(.bss.config) for config
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ConfigureObjectReset) for DRV_CANFDSPI_ConfigureObjectReset
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_Configure) for DRV_CANFDSPI_Configure
+    app.o(.text.APP_CANFDSPI_Init) refers to app.o(.bss.txConfig) for txConfig
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset) for DRV_CANFDSPI_TransmitChannelConfigureObjectReset
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigure) for DRV_CANFDSPI_TransmitChannelConfigure
+    app.o(.text.APP_CANFDSPI_Init) refers to app.o(.bss.rxConfig) for rxConfig
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset) for DRV_CANFDSPI_ReceiveChannelConfigureObjectReset
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigure) for DRV_CANFDSPI_ReceiveChannelConfigure
+    app.o(.text.APP_CANFDSPI_Init) refers to app.o(.bss.fObj) for fObj
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterObjectConfigure) for DRV_CANFDSPI_FilterObjectConfigure
+    app.o(.text.APP_CANFDSPI_Init) refers to app.o(.bss.mObj) for mObj
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterMaskConfigure) for DRV_CANFDSPI_FilterMaskConfigure
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterToFifoLink) for DRV_CANFDSPI_FilterToFifoLink
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) for DRV_CANFDSPI_BitTimeConfigure
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioModeConfigure) for DRV_CANFDSPI_GpioModeConfigure
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventEnable) for DRV_CANFDSPI_ReceiveChannelEventEnable
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventEnable) for DRV_CANFDSPI_ModuleEventEnable
+    app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeSelect) for DRV_CANFDSPI_OperationModeSelect
+    app.o(.ARM.exidx.text.APP_CANFDSPI_Init) refers to app.o(.text.APP_CANFDSPI_Init) for [Anonymous Symbol]
+    app.o(.text.APP_ReceiveMessage_Tasks) refers to stm32f10x_gpio.o(.text.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
+    app.o(.text.APP_ReceiveMessage_Tasks) refers to app.o(.bss.rxObj) for rxObj
+    app.o(.text.APP_ReceiveMessage_Tasks) refers to app.o(.bss.rxd) for rxd
+    app.o(.text.APP_ReceiveMessage_Tasks) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet) for DRV_CANFDSPI_ReceiveMessageGet
+    app.o(.text.APP_ReceiveMessage_Tasks) refers to app.o(.bss.i) for i
+    app.o(.text.APP_ReceiveMessage_Tasks) refers to stm32f10x_gpio.o(.text.GPIO_ResetBits) for GPIO_ResetBits
+    app.o(.text.APP_ReceiveMessage_Tasks) refers to stm32f10x_gpio.o(.text.GPIO_SetBits) for GPIO_SetBits
+    app.o(.text.APP_ReceiveMessage_Tasks) refers to app.o(.bss.txObj) for txObj
+    app.o(.text.APP_ReceiveMessage_Tasks) refers to app.o(.bss.txd) for txd
+    app.o(.text.APP_ReceiveMessage_Tasks) refers to app.o(.text.APP_TransmitMessageQueue) for APP_TransmitMessageQueue
+    app.o(.text.APP_ReceiveMessage_Tasks) refers to app.o(.bss.payload) for payload
+    app.o(.ARM.exidx.text.APP_ReceiveMessage_Tasks) refers to app.o(.text.APP_ReceiveMessage_Tasks) for [Anonymous Symbol]
+    app.o(.text.APP_PayLoad_Tasks) refers to app.o(.bss.payload) for payload
+    app.o(.text.APP_PayLoad_Tasks) refers to app.o(.data.delayCount) for delayCount
+    app.o(.text.APP_PayLoad_Tasks) refers to app.o(.bss.txObj) for txObj
+    app.o(.text.APP_PayLoad_Tasks) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_DlcToDataBytes) for DRV_CANFDSPI_DlcToDataBytes
+    app.o(.text.APP_PayLoad_Tasks) refers to app.o(.bss.i) for i
+    app.o(.text.APP_PayLoad_Tasks) refers to app.o(.bss.txd) for txd
+    app.o(.text.APP_PayLoad_Tasks) refers to rand.o(.text) for rand
+    app.o(.text.APP_PayLoad_Tasks) refers to app.o(.text.APP_TransmitMessageQueue) for APP_TransmitMessageQueue
+    app.o(.text.APP_PayLoad_Tasks) refers to memseta.o(.text) for __aeabi_memset4
+    app.o(.ARM.exidx.text.APP_PayLoad_Tasks) refers to app.o(.text.APP_PayLoad_Tasks) for [Anonymous Symbol]
+    app.o(.text.APP_TransmitSwitchState) refers to stm32f10x_gpio.o(.text.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
+    app.o(.text.APP_TransmitSwitchState) refers to app.o(.bss.lastSwitchState) for lastSwitchState
+    app.o(.text.APP_TransmitSwitchState) refers to app.o(.bss.txObj) for txObj
+    app.o(.text.APP_TransmitSwitchState) refers to app.o(.bss.txd) for txd
+    app.o(.text.APP_TransmitSwitchState) refers to app.o(.text.APP_TransmitMessageQueue) for APP_TransmitMessageQueue
+    app.o(.ARM.exidx.text.APP_TransmitSwitchState) refers to app.o(.text.APP_TransmitSwitchState) for [Anonymous Symbol]
+    app.o(.text.APP_TestRamAccess) refers to app.o(.bss.i) for i
+    app.o(.text.APP_TestRamAccess) refers to app.o(.bss.txd) for txd
+    app.o(.text.APP_TestRamAccess) refers to app.o(.bss.rxd) for rxd
+    app.o(.text.APP_TestRamAccess) refers to rand.o(.text) for rand
+    app.o(.text.APP_TestRamAccess) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArray) for DRV_CANFDSPI_WriteByteArray
+    app.o(.text.APP_TestRamAccess) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray) for DRV_CANFDSPI_ReadByteArray
+    app.o(.ARM.exidx.text.APP_TestRamAccess) refers to app.o(.text.APP_TestRamAccess) for [Anonymous Symbol]
+    app.o(.text.APP_TestRegisterAccess) refers to app.o(.bss.i) for i
+    app.o(.text.APP_TestRegisterAccess) refers to app.o(.bss.txd) for txd
+    app.o(.text.APP_TestRegisterAccess) refers to app.o(.bss.rxd) for rxd
+    app.o(.text.APP_TestRegisterAccess) refers to rand.o(.text) for rand
+    app.o(.text.APP_TestRegisterAccess) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArray) for DRV_CANFDSPI_WriteByteArray
+    app.o(.text.APP_TestRegisterAccess) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray) for DRV_CANFDSPI_ReadByteArray
+    app.o(.ARM.exidx.text.APP_TestRegisterAccess) refers to app.o(.text.APP_TestRegisterAccess) for [Anonymous Symbol]
+    app.o(.text.APP_TransmitMessageQueue) refers to stm32f10x_gpio.o(.text.GPIO_ResetBits) for GPIO_ResetBits
+    app.o(.text.APP_TransmitMessageQueue) refers to app.o(.bss.txFlags) for txFlags
+    app.o(.text.APP_TransmitMessageQueue) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventGet) for DRV_CANFDSPI_TransmitChannelEventGet
+    app.o(.text.APP_TransmitMessageQueue) refers to app.o(.bss.txObj) for txObj
+    app.o(.text.APP_TransmitMessageQueue) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_DlcToDataBytes) for DRV_CANFDSPI_DlcToDataBytes
+    app.o(.text.APP_TransmitMessageQueue) refers to app.o(.bss.txd) for txd
+    app.o(.text.APP_TransmitMessageQueue) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad) for DRV_CANFDSPI_TransmitChannelLoad
+    app.o(.text.APP_TransmitMessageQueue) refers to stm32f10x_gpio.o(.text.GPIO_SetBits) for GPIO_SetBits
+    app.o(.text.APP_TransmitMessageQueue) refers to app.o(.bss.tec) for tec
+    app.o(.text.APP_TransmitMessageQueue) refers to app.o(.bss.rec) for rec
+    app.o(.text.APP_TransmitMessageQueue) refers to app.o(.bss.errorFlags) for errorFlags
+    app.o(.text.APP_TransmitMessageQueue) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountStateGet) for DRV_CANFDSPI_ErrorCountStateGet
+    app.o(.ARM.exidx.text.APP_TransmitMessageQueue) refers to app.o(.text.APP_TransmitMessageQueue) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_Reset) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_Reset) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_Reset) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_Reset) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_Reset) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByte) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByte) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByte) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReadByte) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByte) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByte) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByte) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByte) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteByte) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByte) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadWord) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadWord) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadWord) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReadWord) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadWord) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWord) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWord) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWord) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteWord) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWord) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadHalfWord) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadHalfWord) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadHalfWord) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReadHalfWord) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadHalfWord) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteHalfWord) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteHalfWord) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteHalfWord) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteHalfWord) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteHalfWord) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteSafe) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteSafe) refers to drv_canfdspi_api.o(.rodata.crc16_table) for crc16_table
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteSafe) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteSafe) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteByteSafe) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteSafe) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CalculateCRC16) refers to drv_canfdspi_api.o(.rodata.crc16_table) for crc16_table
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_CalculateCRC16) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_CalculateCRC16) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWordSafe) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWordSafe) refers to drv_canfdspi_api.o(.rodata.crc16_table) for crc16_table
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWordSafe) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWordSafe) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteWordSafe) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWordSafe) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray) refers to memseta.o(.text) for __aeabi_memclr
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReadByteArray) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArrayWithCRC) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArrayWithCRC) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArrayWithCRC) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArrayWithCRC) refers to drv_canfdspi_api.o(.rodata.crc16_table) for crc16_table
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReadByteArrayWithCRC) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArrayWithCRC) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArray) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArray) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArray) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteByteArray) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArray) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArrayWithCRC) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArrayWithCRC) refers to drv_canfdspi_api.o(.rodata.crc16_table) for crc16_table
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArrayWithCRC) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArrayWithCRC) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteByteArrayWithCRC) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArrayWithCRC) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadWordArray) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadWordArray) refers to memseta.o(.text) for __aeabi_memclr
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadWordArray) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadWordArray) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReadWordArray) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadWordArray) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWordArray) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWordArray) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWordArray) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteWordArray) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWordArray) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_Configure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_Configure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_Configure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_Configure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_Configure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ConfigureObjectReset) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ConfigureObjectReset) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeSelect) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeSelect) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeSelect) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_OperationModeSelect) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeSelect) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_OperationModeGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_LowPowerModeEnable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_LowPowerModeEnable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_LowPowerModeDisable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_LowPowerModeDisable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitQueueConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitQueueConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitQueueConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitQueueConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitQueueConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitQueueConfigureObjectReset) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitQueueConfigureObjectReset) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_DlcToDataBytes) for .Lswitch.table.DRV_CANFDSPI_DlcToDataBytes
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad) refers to memseta.o(.text) for __aeabi_memclr
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad) refers to memcpya.o(.text) for __aeabi_memcpy
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelLoad) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_DlcToDataBytes) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_DlcToDataBytes) for .Lswitch.table.DRV_CANFDSPI_DlcToDataBytes
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_DlcToDataBytes) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_DlcToDataBytes) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelUpdate) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelUpdate) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelUpdate) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelUpdate) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelUpdate) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelFlush) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelFlush) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelFlush) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelFlush) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelFlush) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelStatusGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelStatusGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelStatusGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelStatusGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelStatusGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelReset) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelReset) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelReset) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelReset) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelReset) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelReset) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelReset) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelReset) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelReset) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelReset) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitRequestSet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitRequestSet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitRequestSet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitRequestSet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitRequestSet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitRequestGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitRequestGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitRequestGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitRequestGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitRequestGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelAbort) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelAbort) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelAbort) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelAbort) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelAbort) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitAbortAll) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitAbortAll) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitAbortAll) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitAbortAll) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitAbortAll) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitBandWidthSharingSet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitBandWidthSharingSet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitBandWidthSharingSet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitBandWidthSharingSet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitBandWidthSharingSet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterObjectConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterObjectConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterObjectConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_FilterObjectConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterObjectConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterMaskConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterMaskConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterMaskConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_FilterMaskConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterMaskConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterToFifoLink) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterToFifoLink) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterToFifoLink) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_FilterToFifoLink) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterToFifoLink) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterEnable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterEnable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterEnable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_FilterEnable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterEnable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterDisable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterDisable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterDisable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_FilterDisable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterDisable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_DeviceNetFilterCountSet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_DeviceNetFilterCountSet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_DeviceNetFilterCountSet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_DeviceNetFilterCountSet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_DeviceNetFilterCountSet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelStatusGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelStatusGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelStatusGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelStatusGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelStatusGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet) refers to memseta.o(.text) for __aeabi_memclr
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet) refers to memcpya.o(.text) for __aeabi_memcpy
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveMessageGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelUpdate) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelUpdate) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelUpdate) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelUpdate) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelUpdate) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefStatusGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefStatusGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefStatusGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefStatusGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefStatusGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefMessageGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefMessageGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefMessageGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefMessageGet) refers to memseta.o(.text) for __aeabi_memclr
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefMessageGet) refers to memcpya.o(.text) for __aeabi_memcpy
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefMessageGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefMessageGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefUpdate) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefUpdate) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefUpdate) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefUpdate) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefUpdate) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefReset) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefReset) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefReset) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefReset) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefReset) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefConfigureObjectReset) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefConfigureObjectReset) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventEnable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventEnable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventEnable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventEnable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventEnable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventDisable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventDisable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventDisable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventDisable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventDisable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventClear) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventClear) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventClear) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventClear) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventClear) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventRxCodeGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventRxCodeGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventRxCodeGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventRxCodeGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventRxCodeGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventTxCodeGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventTxCodeGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventTxCodeGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventTxCodeGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventTxCodeGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventFilterHitGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventFilterHitGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventFilterHitGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventFilterHitGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventFilterHitGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventIcodeGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventIcodeGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventIcodeGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventIcodeGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventIcodeGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelEventGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitEventGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitEventGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitEventGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitEventGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitEventGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitEventAttemptGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitEventAttemptGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitEventAttemptGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitEventAttemptGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitEventAttemptGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelIndexGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelIndexGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelIndexGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelIndexGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelIndexGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventEnable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventEnable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventEnable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelEventEnable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventEnable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventDisable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventDisable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventDisable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelEventDisable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventDisable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventAttemptClear) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventAttemptClear) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventAttemptClear) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelEventAttemptClear) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventAttemptClear) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelEventGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveEventGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveEventGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveEventGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveEventGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveEventGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveEventOverflowGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveEventOverflowGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveEventOverflowGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveEventOverflowGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveEventOverflowGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelIndexGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelIndexGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelIndexGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelIndexGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelIndexGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventEnable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventEnable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventEnable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelEventEnable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventEnable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventDisable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventDisable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventDisable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelEventDisable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventDisable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventOverflowClear) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventOverflowClear) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventOverflowClear) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelEventOverflowClear) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventOverflowClear) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefEventGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventEnable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventEnable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventEnable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefEventEnable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventEnable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventDisable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventDisable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventDisable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefEventDisable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventDisable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventOverflowClear) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventOverflowClear) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventOverflowClear) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefEventOverflowClear) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventOverflowClear) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountTransmitGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountTransmitGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountTransmitGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ErrorCountTransmitGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountTransmitGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountReceiveGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountReceiveGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountReceiveGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ErrorCountReceiveGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountReceiveGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorStateGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorStateGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorStateGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ErrorStateGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorStateGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountStateGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountStateGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountStateGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ErrorCountStateGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountStateGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BusDiagnosticsGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BusDiagnosticsGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BusDiagnosticsGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BusDiagnosticsGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BusDiagnosticsGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BusDiagnosticsClear) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BusDiagnosticsClear) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BusDiagnosticsClear) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BusDiagnosticsClear) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BusDiagnosticsClear) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEnable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEnable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEnable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccEnable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEnable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccDisable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccDisable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccDisable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccDisable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccDisable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccEventGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccParitySet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccParitySet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccParitySet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccParitySet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccParitySet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccParityGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccParityGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccParityGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccParityGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccParityGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccErrorAddressGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccErrorAddressGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccErrorAddressGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccErrorAddressGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccErrorAddressGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventEnable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventEnable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventEnable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccEventEnable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventEnable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventDisable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventDisable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventDisable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccEventDisable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventDisable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventClear) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventClear) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventClear) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccEventClear) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventClear) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventEnable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventEnable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventEnable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_CrcEventEnable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventEnable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventDisable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventDisable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventDisable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_CrcEventDisable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventDisable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventClear) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventClear) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventClear) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_CrcEventClear) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventClear) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_CrcEventGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcValueGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcValueGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcValueGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_CrcValueGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcValueGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_RamInit) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_RamInit) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_RamInit) refers to memseta.o(.text) for __aeabi_memset
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_RamInit) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_RamInit) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_RamInit) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampEnable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampEnable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampEnable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TimeStampEnable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampEnable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampDisable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampDisable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampDisable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TimeStampDisable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampDisable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TimeStampGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampSet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampSet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampSet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TimeStampSet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampSet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampModeConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampModeConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampModeConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TimeStampModeConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampModeConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampPrescalerSet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampPrescalerSet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampPrescalerSet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TimeStampPrescalerSet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampPrescalerSet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorEnable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorEnable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorEnable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_OscillatorEnable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorEnable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorControlSet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorControlSet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorControlSet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_OscillatorControlSet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorControlSet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_OscillatorControlObjectReset) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorControlObjectReset) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorStatusGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorStatusGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorStatusGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_OscillatorStatusGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorStatusGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz) for DRV_CANFDSPI_BitTimeConfigureData40MHz
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz) for DRV_CANFDSPI_BitTimeConfigureData20MHz
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData10MHz) for DRV_CANFDSPI_BitTimeConfigureData10MHz
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal40MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal40MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal40MHz) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal40MHz) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal40MHz) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigureNominal40MHz) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal40MHz) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.7) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.7
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.8) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.8
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.10) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.10
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.11) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.11
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigureData40MHz) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal20MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal20MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal20MHz) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal20MHz) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal20MHz) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigureNominal20MHz) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal20MHz) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.13) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.13
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.15) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.15
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigureData20MHz) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal10MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal10MHz) refers to drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16) for .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal10MHz) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal10MHz) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal10MHz) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigureNominal10MHz) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal10MHz) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData10MHz) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData10MHz) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData10MHz) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigureData10MHz) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData10MHz) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioModeConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioModeConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioModeConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioModeConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioModeConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioDirectionConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioDirectionConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioDirectionConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioDirectionConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioDirectionConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioStandbyControlEnable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioStandbyControlEnable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioStandbyControlEnable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioStandbyControlEnable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioStandbyControlEnable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioStandbyControlDisable) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioStandbyControlDisable) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioStandbyControlDisable) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioStandbyControlDisable) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioStandbyControlDisable) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioInterruptPinsOpenDrainConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioInterruptPinsOpenDrainConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioInterruptPinsOpenDrainConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioInterruptPinsOpenDrainConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioInterruptPinsOpenDrainConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioTransmitPinOpenDrainConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioTransmitPinOpenDrainConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioTransmitPinOpenDrainConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioTransmitPinOpenDrainConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioTransmitPinOpenDrainConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioPinSet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioPinSet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioPinSet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioPinSet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioPinSet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioPinRead) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioPinRead) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioPinRead) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioPinRead) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioPinRead) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioClockOutputConfigure) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioClockOutputConfigure) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioClockOutputConfigure) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioClockOutputConfigure) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioClockOutputConfigure) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FifoIndexGet) refers to drv_canfdspi_api.o(.bss.spiTransmitBuffer) for spiTransmitBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FifoIndexGet) refers to drv_canfdspi_api.o(.bss.spiReceiveBuffer) for spiReceiveBuffer
+    drv_canfdspi_api.o(.text.DRV_CANFDSPI_FifoIndexGet) refers to drv_spi.o(.text.DRV_SPI_TransferData) for DRV_SPI_TransferData
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_FifoIndexGet) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_FifoIndexGet) for [Anonymous Symbol]
+    drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_DataBytesToDlc) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_DataBytesToDlc) for [Anonymous Symbol]
+    drv_spi.o(.text.DRV_SPI_Initialize) refers to stm32f10x_rcc.o(.text.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    drv_spi.o(.text.DRV_SPI_Initialize) refers to stm32f10x_gpio.o(.text.GPIO_Init) for GPIO_Init
+    drv_spi.o(.text.DRV_SPI_Initialize) refers to stm32f10x_gpio.o(.text.GPIO_SetBits) for GPIO_SetBits
+    drv_spi.o(.text.DRV_SPI_Initialize) refers to stm32f10x_spi.o(.text.SPI_Init) for SPI_Init
+    drv_spi.o(.text.DRV_SPI_Initialize) refers to stm32f10x_spi.o(.text.SPI_Cmd) for SPI_Cmd
+    drv_spi.o(.ARM.exidx.text.DRV_SPI_Initialize) refers to drv_spi.o(.text.DRV_SPI_Initialize) for [Anonymous Symbol]
+    drv_spi.o(.text.spi_master_init) refers to stm32f10x_rcc.o(.text.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    drv_spi.o(.text.spi_master_init) refers to stm32f10x_gpio.o(.text.GPIO_Init) for GPIO_Init
+    drv_spi.o(.text.spi_master_init) refers to stm32f10x_gpio.o(.text.GPIO_SetBits) for GPIO_SetBits
+    drv_spi.o(.text.spi_master_init) refers to stm32f10x_spi.o(.text.SPI_Init) for SPI_Init
+    drv_spi.o(.text.spi_master_init) refers to stm32f10x_spi.o(.text.SPI_Cmd) for SPI_Cmd
+    drv_spi.o(.ARM.exidx.text.spi_master_init) refers to drv_spi.o(.text.spi_master_init) for [Anonymous Symbol]
+    drv_spi.o(.text.DRV_SPI_TransferData) refers to stm32f10x_gpio.o(.text.GPIO_ResetBits) for GPIO_ResetBits
+    drv_spi.o(.text.DRV_SPI_TransferData) refers to stm32f10x_spi.o(.text.SPI_I2S_GetFlagStatus) for SPI_I2S_GetFlagStatus
+    drv_spi.o(.text.DRV_SPI_TransferData) refers to stm32f10x_spi.o(.text.SPI_I2S_SendData) for SPI_I2S_SendData
+    drv_spi.o(.text.DRV_SPI_TransferData) refers to stm32f10x_spi.o(.text.SPI_I2S_ReceiveData) for SPI_I2S_ReceiveData
+    drv_spi.o(.text.DRV_SPI_TransferData) refers to stm32f10x_gpio.o(.text.GPIO_SetBits) for GPIO_SetBits
+    drv_spi.o(.ARM.exidx.text.DRV_SPI_TransferData) refers to drv_spi.o(.text.DRV_SPI_TransferData) for [Anonymous Symbol]
+    drv_spi.o(.text.spi_master_transfer) refers to stm32f10x_gpio.o(.text.GPIO_ResetBits) for GPIO_ResetBits
+    drv_spi.o(.text.spi_master_transfer) refers to stm32f10x_spi.o(.text.SPI_I2S_GetFlagStatus) for SPI_I2S_GetFlagStatus
+    drv_spi.o(.text.spi_master_transfer) refers to stm32f10x_spi.o(.text.SPI_I2S_SendData) for SPI_I2S_SendData
+    drv_spi.o(.text.spi_master_transfer) refers to stm32f10x_spi.o(.text.SPI_I2S_ReceiveData) for SPI_I2S_ReceiveData
+    drv_spi.o(.text.spi_master_transfer) refers to stm32f10x_gpio.o(.text.GPIO_SetBits) for GPIO_SetBits
+    drv_spi.o(.ARM.exidx.text.spi_master_transfer) refers to drv_spi.o(.text.spi_master_transfer) for [Anonymous Symbol]
+    misc.o(.ARM.exidx.text.NVIC_PriorityGroupConfig) refers to misc.o(.text.NVIC_PriorityGroupConfig) for [Anonymous Symbol]
+    misc.o(.ARM.exidx.text.NVIC_Init) refers to misc.o(.text.NVIC_Init) for [Anonymous Symbol]
+    misc.o(.ARM.exidx.text.NVIC_SetVectorTable) refers to misc.o(.text.NVIC_SetVectorTable) for [Anonymous Symbol]
+    misc.o(.ARM.exidx.text.NVIC_SystemLPConfig) refers to misc.o(.text.NVIC_SystemLPConfig) for [Anonymous Symbol]
+    misc.o(.ARM.exidx.text.SysTick_CLKSourceConfig) refers to misc.o(.text.SysTick_CLKSourceConfig) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.text.GPIO_DeInit) refers to stm32f10x_gpio.o(.rodata..Lswitch.table.GPIO_DeInit.1) for .Lswitch.table.GPIO_DeInit.1
+    stm32f10x_gpio.o(.text.GPIO_DeInit) refers to stm32f10x_rcc.o(.text.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_DeInit) refers to stm32f10x_gpio.o(.text.GPIO_DeInit) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.text.GPIO_AFIODeInit) refers to stm32f10x_rcc.o(.text.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_AFIODeInit) refers to stm32f10x_gpio.o(.text.GPIO_AFIODeInit) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_Init) refers to stm32f10x_gpio.o(.text.GPIO_Init) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_StructInit) refers to stm32f10x_gpio.o(.text.GPIO_StructInit) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_ReadInputDataBit) refers to stm32f10x_gpio.o(.text.GPIO_ReadInputDataBit) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_ReadInputData) refers to stm32f10x_gpio.o(.text.GPIO_ReadInputData) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_ReadOutputDataBit) refers to stm32f10x_gpio.o(.text.GPIO_ReadOutputDataBit) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_ReadOutputData) refers to stm32f10x_gpio.o(.text.GPIO_ReadOutputData) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_SetBits) refers to stm32f10x_gpio.o(.text.GPIO_SetBits) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_ResetBits) refers to stm32f10x_gpio.o(.text.GPIO_ResetBits) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_WriteBit) refers to stm32f10x_gpio.o(.text.GPIO_WriteBit) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_Write) refers to stm32f10x_gpio.o(.text.GPIO_Write) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_PinLockConfig) refers to stm32f10x_gpio.o(.text.GPIO_PinLockConfig) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_EventOutputConfig) refers to stm32f10x_gpio.o(.text.GPIO_EventOutputConfig) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_EventOutputCmd) refers to stm32f10x_gpio.o(.text.GPIO_EventOutputCmd) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_PinRemapConfig) refers to stm32f10x_gpio.o(.text.GPIO_PinRemapConfig) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_EXTILineConfig) refers to stm32f10x_gpio.o(.text.GPIO_EXTILineConfig) for [Anonymous Symbol]
+    stm32f10x_gpio.o(.ARM.exidx.text.GPIO_ETH_MediaInterfaceConfig) refers to stm32f10x_gpio.o(.text.GPIO_ETH_MediaInterfaceConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_DeInit) refers to stm32f10x_rcc.o(.text.RCC_DeInit) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_HSEConfig) refers to stm32f10x_rcc.o(.text.RCC_HSEConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_WaitForHSEStartUp) refers to stm32f10x_rcc.o(.text.RCC_WaitForHSEStartUp) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_GetFlagStatus) refers to stm32f10x_rcc.o(.text.RCC_GetFlagStatus) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_AdjustHSICalibrationValue) refers to stm32f10x_rcc.o(.text.RCC_AdjustHSICalibrationValue) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_HSICmd) refers to stm32f10x_rcc.o(.text.RCC_HSICmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_PLLConfig) refers to stm32f10x_rcc.o(.text.RCC_PLLConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_PLLCmd) refers to stm32f10x_rcc.o(.text.RCC_PLLCmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_PREDIV1Config) refers to stm32f10x_rcc.o(.text.RCC_PREDIV1Config) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_PREDIV2Config) refers to stm32f10x_rcc.o(.text.RCC_PREDIV2Config) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_PLL2Config) refers to stm32f10x_rcc.o(.text.RCC_PLL2Config) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_PLL2Cmd) refers to stm32f10x_rcc.o(.text.RCC_PLL2Cmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_PLL3Config) refers to stm32f10x_rcc.o(.text.RCC_PLL3Config) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_PLL3Cmd) refers to stm32f10x_rcc.o(.text.RCC_PLL3Cmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_SYSCLKConfig) refers to stm32f10x_rcc.o(.text.RCC_SYSCLKConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_GetSYSCLKSource) refers to stm32f10x_rcc.o(.text.RCC_GetSYSCLKSource) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_HCLKConfig) refers to stm32f10x_rcc.o(.text.RCC_HCLKConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_PCLK1Config) refers to stm32f10x_rcc.o(.text.RCC_PCLK1Config) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_PCLK2Config) refers to stm32f10x_rcc.o(.text.RCC_PCLK2Config) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_ITConfig) refers to stm32f10x_rcc.o(.text.RCC_ITConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_OTGFSCLKConfig) refers to stm32f10x_rcc.o(.text.RCC_OTGFSCLKConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_ADCCLKConfig) refers to stm32f10x_rcc.o(.text.RCC_ADCCLKConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_I2S2CLKConfig) refers to stm32f10x_rcc.o(.text.RCC_I2S2CLKConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_I2S3CLKConfig) refers to stm32f10x_rcc.o(.text.RCC_I2S3CLKConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_LSEConfig) refers to stm32f10x_rcc.o(.text.RCC_LSEConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_LSICmd) refers to stm32f10x_rcc.o(.text.RCC_LSICmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_RTCCLKConfig) refers to stm32f10x_rcc.o(.text.RCC_RTCCLKConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_RTCCLKCmd) refers to stm32f10x_rcc.o(.text.RCC_RTCCLKCmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.text.RCC_GetClocksFreq) refers to stm32f10x_rcc.o(.rodata.APBAHBPrescTable) for APBAHBPrescTable
+    stm32f10x_rcc.o(.text.RCC_GetClocksFreq) refers to stm32f10x_rcc.o(.rodata.ADCPrescTable) for ADCPrescTable
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_GetClocksFreq) refers to stm32f10x_rcc.o(.text.RCC_GetClocksFreq) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_AHBPeriphClockCmd) refers to stm32f10x_rcc.o(.text.RCC_AHBPeriphClockCmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_APB2PeriphClockCmd) refers to stm32f10x_rcc.o(.text.RCC_APB2PeriphClockCmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_APB1PeriphClockCmd) refers to stm32f10x_rcc.o(.text.RCC_APB1PeriphClockCmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_AHBPeriphResetCmd) refers to stm32f10x_rcc.o(.text.RCC_AHBPeriphResetCmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_APB2PeriphResetCmd) refers to stm32f10x_rcc.o(.text.RCC_APB2PeriphResetCmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_APB1PeriphResetCmd) refers to stm32f10x_rcc.o(.text.RCC_APB1PeriphResetCmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_BackupResetCmd) refers to stm32f10x_rcc.o(.text.RCC_BackupResetCmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_ClockSecuritySystemCmd) refers to stm32f10x_rcc.o(.text.RCC_ClockSecuritySystemCmd) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_MCOConfig) refers to stm32f10x_rcc.o(.text.RCC_MCOConfig) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_ClearFlag) refers to stm32f10x_rcc.o(.text.RCC_ClearFlag) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_GetITStatus) refers to stm32f10x_rcc.o(.text.RCC_GetITStatus) for [Anonymous Symbol]
+    stm32f10x_rcc.o(.ARM.exidx.text.RCC_ClearITPendingBit) refers to stm32f10x_rcc.o(.text.RCC_ClearITPendingBit) for [Anonymous Symbol]
+    stm32f10x_spi.o(.text.SPI_I2S_DeInit) refers to stm32f10x_rcc.o(.text.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_spi.o(.text.SPI_I2S_DeInit) refers to stm32f10x_rcc.o(.text.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_DeInit) refers to stm32f10x_spi.o(.text.SPI_I2S_DeInit) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_Init) refers to stm32f10x_spi.o(.text.SPI_Init) for [Anonymous Symbol]
+    stm32f10x_spi.o(.text.I2S_Init) refers to stm32f10x_rcc.o(.text.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    stm32f10x_spi.o(.ARM.exidx.text.I2S_Init) refers to stm32f10x_spi.o(.text.I2S_Init) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_StructInit) refers to stm32f10x_spi.o(.text.SPI_StructInit) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.I2S_StructInit) refers to stm32f10x_spi.o(.text.I2S_StructInit) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_Cmd) refers to stm32f10x_spi.o(.text.SPI_Cmd) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.I2S_Cmd) refers to stm32f10x_spi.o(.text.I2S_Cmd) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_ITConfig) refers to stm32f10x_spi.o(.text.SPI_I2S_ITConfig) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_DMACmd) refers to stm32f10x_spi.o(.text.SPI_I2S_DMACmd) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_SendData) refers to stm32f10x_spi.o(.text.SPI_I2S_SendData) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_ReceiveData) refers to stm32f10x_spi.o(.text.SPI_I2S_ReceiveData) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_NSSInternalSoftwareConfig) refers to stm32f10x_spi.o(.text.SPI_NSSInternalSoftwareConfig) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_SSOutputCmd) refers to stm32f10x_spi.o(.text.SPI_SSOutputCmd) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_DataSizeConfig) refers to stm32f10x_spi.o(.text.SPI_DataSizeConfig) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_TransmitCRC) refers to stm32f10x_spi.o(.text.SPI_TransmitCRC) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_CalculateCRC) refers to stm32f10x_spi.o(.text.SPI_CalculateCRC) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_GetCRC) refers to stm32f10x_spi.o(.text.SPI_GetCRC) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_GetCRCPolynomial) refers to stm32f10x_spi.o(.text.SPI_GetCRCPolynomial) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_BiDirectionalLineConfig) refers to stm32f10x_spi.o(.text.SPI_BiDirectionalLineConfig) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_GetFlagStatus) refers to stm32f10x_spi.o(.text.SPI_I2S_GetFlagStatus) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_ClearFlag) refers to stm32f10x_spi.o(.text.SPI_I2S_ClearFlag) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_GetITStatus) refers to stm32f10x_spi.o(.text.SPI_I2S_GetITStatus) for [Anonymous Symbol]
+    stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_ClearITPendingBit) refers to stm32f10x_spi.o(.text.SPI_I2S_ClearITPendingBit) for [Anonymous Symbol]
+    stm32f10x_exti.o(.ARM.exidx.text.EXTI_DeInit) refers to stm32f10x_exti.o(.text.EXTI_DeInit) for [Anonymous Symbol]
+    stm32f10x_exti.o(.ARM.exidx.text.EXTI_Init) refers to stm32f10x_exti.o(.text.EXTI_Init) for [Anonymous Symbol]
+    stm32f10x_exti.o(.ARM.exidx.text.EXTI_StructInit) refers to stm32f10x_exti.o(.text.EXTI_StructInit) for [Anonymous Symbol]
+    stm32f10x_exti.o(.ARM.exidx.text.EXTI_GenerateSWInterrupt) refers to stm32f10x_exti.o(.text.EXTI_GenerateSWInterrupt) for [Anonymous Symbol]
+    stm32f10x_exti.o(.ARM.exidx.text.EXTI_GetFlagStatus) refers to stm32f10x_exti.o(.text.EXTI_GetFlagStatus) for [Anonymous Symbol]
+    stm32f10x_exti.o(.ARM.exidx.text.EXTI_ClearFlag) refers to stm32f10x_exti.o(.text.EXTI_ClearFlag) for [Anonymous Symbol]
+    stm32f10x_exti.o(.ARM.exidx.text.EXTI_GetITStatus) refers to stm32f10x_exti.o(.text.EXTI_GetITStatus) for [Anonymous Symbol]
+    stm32f10x_exti.o(.ARM.exidx.text.EXTI_ClearITPendingBit) refers to stm32f10x_exti.o(.text.EXTI_ClearITPendingBit) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    rand.o(.text) refers to rand.o(.data) for .data
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f10x_cl.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f10x_cl.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_stm32f10x.o(.text), (0 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_stm32f10x.o(.text.SystemCoreClockUpdate), (172 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_stm32f10x.o(.data.SystemCoreClock), (4 bytes).
+    Removing system_stm32f10x.o(.rodata.AHBPrescTable), (16 bytes).
+    Removing startup_stm32f10x_cl.o(HEAP), (2048 bytes).
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing app.o(.text), (0 bytes).
+    Removing app.o(.text.APP_LED_Clear), (22 bytes).
+    Removing app.o(.ARM.exidx.text.APP_LED_Clear), (8 bytes).
+    Removing app.o(.text.APP_LED_Set), (22 bytes).
+    Removing app.o(.ARM.exidx.text.APP_LED_Set), (8 bytes).
+    Removing app.o(.text.APP_LED_Write), (102 bytes).
+    Removing app.o(.ARM.exidx.text.APP_LED_Write), (8 bytes).
+    Removing app.o(.ARM.exidx.text.APP_Initialize), (8 bytes).
+    Removing app.o(.ARM.exidx.text.APP_Tasks), (8 bytes).
+    Removing app.o(.ARM.exidx.text.APP_CANFDSPI_Init), (8 bytes).
+    Removing app.o(.ARM.exidx.text.APP_ReceiveMessage_Tasks), (8 bytes).
+    Removing app.o(.ARM.exidx.text.APP_PayLoad_Tasks), (8 bytes).
+    Removing app.o(.text.APP_TransmitSwitchState), (96 bytes).
+    Removing app.o(.ARM.exidx.text.APP_TransmitSwitchState), (8 bytes).
+    Removing app.o(.ARM.exidx.text.APP_TestRamAccess), (8 bytes).
+    Removing app.o(.ARM.exidx.text.APP_TestRegisterAccess), (8 bytes).
+    Removing app.o(.ARM.exidx.text.APP_TransmitMessageQueue), (8 bytes).
+    Removing app.o(.bss.opMode), (1 bytes).
+    Removing app.o(.bss.rxFlags), (1 bytes).
+    Removing app.o(.bss.reg), (4 bytes).
+    Removing app.o(.bss.busDiagnostics), (12 bytes).
+    Removing drv_canfdspi_api.o(.text), (0 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_Reset), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByte), (52 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReadByte), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByte), (52 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteByte), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadWord), (76 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReadWord), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWord), (64 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteWord), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadHalfWord), (76 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReadHalfWord), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteHalfWord), (64 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteHalfWord), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteSafe), (102 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteByteSafe), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_CalculateCRC16), (70 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_CalculateCRC16), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWordSafe), (122 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteWordSafe), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReadByteArray), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArrayWithCRC), (250 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReadByteArrayWithCRC), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteByteArray), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArrayWithCRC), (158 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteByteArrayWithCRC), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadWordArray), (140 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReadWordArray), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteWordArray), (112 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_WriteWordArray), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_Configure), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ConfigureObjectReset), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_OperationModeSelect), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeGet), (50 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_OperationModeGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_LowPowerModeEnable), (6 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_LowPowerModeEnable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_LowPowerModeDisable), (6 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_LowPowerModeDisable), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitQueueConfigure), (76 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitQueueConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitQueueConfigureObjectReset), (18 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitQueueConfigureObjectReset), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelLoad), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_DlcToDataBytes), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelUpdate), (74 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelUpdate), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelFlush), (50 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelFlush), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelStatusGet), (152 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelStatusGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelReset), (52 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelReset), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelReset), (52 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelReset), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitRequestSet), (56 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitRequestSet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitRequestGet), (68 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitRequestGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelAbort), (52 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelAbort), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitAbortAll), (88 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitAbortAll), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitBandWidthSharingSet), (96 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitBandWidthSharingSet), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_FilterObjectConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_FilterMaskConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_FilterToFifoLink), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterEnable), (106 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_FilterEnable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterDisable), (106 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_FilterDisable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_DeviceNetFilterCountSet), (90 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_DeviceNetFilterCountSet), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelStatusGet), (74 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelStatusGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveMessageGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelUpdate), (52 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelUpdate), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefStatusGet), (60 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefStatusGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefMessageGet), (284 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefMessageGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefUpdate), (36 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefUpdate), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefReset), (36 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefReset), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefConfigure), (76 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefConfigureObjectReset), (14 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefConfigureObjectReset), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventGet), (82 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventEnable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventDisable), (148 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventDisable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventClear), (74 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventClear), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventRxCodeGet), (70 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventRxCodeGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventTxCodeGet), (70 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventTxCodeGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventFilterHitGet), (56 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventFilterHitGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventIcodeGet), (76 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ModuleEventIcodeGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelEventGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitEventGet), (68 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitEventGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitEventAttemptGet), (68 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitEventAttemptGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelIndexGet), (106 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelIndexGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventEnable), (118 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelEventEnable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventDisable), (120 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelEventDisable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventAttemptClear), (114 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TransmitChannelEventAttemptClear), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventGet), (82 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelEventGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveEventGet), (68 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveEventGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveEventOverflowGet), (68 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveEventOverflowGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelIndexGet), (106 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelIndexGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelEventEnable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventDisable), (126 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelEventDisable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventOverflowClear), (124 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ReceiveChannelEventOverflowClear), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventGet), (60 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefEventGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventEnable), (94 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefEventEnable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventDisable), (96 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefEventDisable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TefEventOverflowClear), (88 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TefEventOverflowClear), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountTransmitGet), (44 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ErrorCountTransmitGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountReceiveGet), (44 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ErrorCountReceiveGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorStateGet), (60 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ErrorStateGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_ErrorCountStateGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_BusDiagnosticsGet), (134 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BusDiagnosticsGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_BusDiagnosticsClear), (94 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BusDiagnosticsClear), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccEnable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccDisable), (88 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccDisable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventGet), (60 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccEventGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccParitySet), (34 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccParitySet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccParityGet), (44 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccParityGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccErrorAddressGet), (90 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccErrorAddressGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventEnable), (94 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccEventEnable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventDisable), (96 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccEventDisable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEventClear), (96 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_EccEventClear), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventEnable), (94 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_CrcEventEnable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventDisable), (96 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_CrcEventDisable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventClear), (96 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_CrcEventClear), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcEventGet), (60 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_CrcEventGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_CrcValueGet), (68 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_CrcValueGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_RamInit), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampEnable), (88 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TimeStampEnable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampDisable), (88 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TimeStampDisable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampGet), (68 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TimeStampGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampSet), (56 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TimeStampSet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampModeConfigure), (96 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TimeStampModeConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_TimeStampPrescalerSet), (56 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_TimeStampPrescalerSet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorEnable), (84 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_OscillatorEnable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorControlSet), (50 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_OscillatorControlSet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorControlObjectReset), (18 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_OscillatorControlObjectReset), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_OscillatorStatusGet), (76 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_OscillatorStatusGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal40MHz), (100 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigureNominal40MHz), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigureData40MHz), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal20MHz), (132 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigureNominal20MHz), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigureData20MHz), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureNominal10MHz), (132 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigureNominal10MHz), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_BitTimeConfigureData10MHz), (8 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioModeConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioDirectionConfigure), (108 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioDirectionConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioStandbyControlEnable), (88 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioStandbyControlEnable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioStandbyControlDisable), (88 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioStandbyControlDisable), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioInterruptPinsOpenDrainConfigure), (100 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioInterruptPinsOpenDrainConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioTransmitPinOpenDrainConfigure), (100 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioTransmitPinOpenDrainConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioPinSet), (128 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioPinSet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioPinRead), (70 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioPinRead), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioClockOutputConfigure), (100 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_GpioClockOutputConfigure), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_FifoIndexGet), (74 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_FifoIndexGet), (8 bytes).
+    Removing drv_canfdspi_api.o(.text.DRV_CANFDSPI_DataBytesToDlc), (76 bytes).
+    Removing drv_canfdspi_api.o(.ARM.exidx.text.DRV_CANFDSPI_DataBytesToDlc), (8 bytes).
+    Removing drv_canfdspi_api.o(.rodata.BitReverseTable256), (256 bytes).
+    Removing drv_canfdspi_api.o(.rodata.crc16_table), (512 bytes).
+    Removing drv_spi.o(.text), (0 bytes).
+    Removing drv_spi.o(.ARM.exidx.text.DRV_SPI_Initialize), (8 bytes).
+    Removing drv_spi.o(.text.spi_master_init), (130 bytes).
+    Removing drv_spi.o(.ARM.exidx.text.spi_master_init), (8 bytes).
+    Removing drv_spi.o(.ARM.exidx.text.DRV_SPI_TransferData), (8 bytes).
+    Removing drv_spi.o(.text.spi_master_transfer), (100 bytes).
+    Removing drv_spi.o(.ARM.exidx.text.spi_master_transfer), (8 bytes).
+    Removing misc.o(.text), (0 bytes).
+    Removing misc.o(.text.NVIC_PriorityGroupConfig), (20 bytes).
+    Removing misc.o(.ARM.exidx.text.NVIC_PriorityGroupConfig), (8 bytes).
+    Removing misc.o(.text.NVIC_Init), (94 bytes).
+    Removing misc.o(.ARM.exidx.text.NVIC_Init), (8 bytes).
+    Removing misc.o(.text.NVIC_SetVectorTable), (24 bytes).
+    Removing misc.o(.ARM.exidx.text.NVIC_SetVectorTable), (8 bytes).
+    Removing misc.o(.text.NVIC_SystemLPConfig), (24 bytes).
+    Removing misc.o(.ARM.exidx.text.NVIC_SystemLPConfig), (8 bytes).
+    Removing misc.o(.text.SysTick_CLKSourceConfig), (24 bytes).
+    Removing misc.o(.ARM.exidx.text.SysTick_CLKSourceConfig), (8 bytes).
+    Removing stm32f10x_gpio.o(.text), (0 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_DeInit), (52 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_DeInit), (8 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_AFIODeInit), (22 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_AFIODeInit), (8 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_Init), (8 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_StructInit), (12 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_StructInit), (8 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_ReadInputDataBit), (8 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_ReadInputData), (6 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_ReadInputData), (8 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_ReadOutputDataBit), (10 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_ReadOutputDataBit), (8 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_ReadOutputData), (6 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_ReadOutputData), (8 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_SetBits), (8 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_ResetBits), (8 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_WriteBit), (12 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_WriteBit), (8 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_Write), (4 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_Write), (8 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_PinLockConfig), (16 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_PinLockConfig), (8 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_EventOutputConfig), (30 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_EventOutputConfig), (8 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_EventOutputCmd), (10 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_EventOutputCmd), (8 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_PinRemapConfig), (8 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_EXTILineConfig), (46 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_EXTILineConfig), (8 bytes).
+    Removing stm32f10x_gpio.o(.text.GPIO_ETH_MediaInterfaceConfig), (10 bytes).
+    Removing stm32f10x_gpio.o(.ARM.exidx.text.GPIO_ETH_MediaInterfaceConfig), (8 bytes).
+    Removing stm32f10x_gpio.o(.rodata..Lswitch.table.GPIO_DeInit.1), (28 bytes).
+    Removing stm32f10x_rcc.o(.text), (0 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_DeInit), (78 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_DeInit), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_HSEConfig), (50 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_HSEConfig), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_WaitForHSEStartUp), (48 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_WaitForHSEStartUp), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_GetFlagStatus), (38 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_GetFlagStatus), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_AdjustHSICalibrationValue), (22 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_AdjustHSICalibrationValue), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_HSICmd), (10 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_HSICmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_PLLConfig), (22 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_PLLConfig), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_PLLCmd), (10 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_PLLCmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_PREDIV1Config), (32 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_PREDIV1Config), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_PREDIV2Config), (20 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_PREDIV2Config), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_PLL2Config), (20 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_PLL2Config), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_PLL2Cmd), (10 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_PLL2Cmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_PLL3Config), (20 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_PLL3Config), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_PLL3Cmd), (10 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_PLL3Cmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_SYSCLKConfig), (20 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_SYSCLKConfig), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_GetSYSCLKSource), (16 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_GetSYSCLKSource), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_HCLKConfig), (20 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_HCLKConfig), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_PCLK1Config), (20 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_PCLK1Config), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_PCLK2Config), (22 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_PCLK2Config), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_ITConfig), (24 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_ITConfig), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_OTGFSCLKConfig), (10 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_OTGFSCLKConfig), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_ADCCLKConfig), (20 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_ADCCLKConfig), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_I2S2CLKConfig), (12 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_I2S2CLKConfig), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_I2S3CLKConfig), (12 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_I2S3CLKConfig), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_LSEConfig), (30 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_LSEConfig), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_LSICmd), (12 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_LSICmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_RTCCLKConfig), (16 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_RTCCLKConfig), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_RTCCLKCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_RTCCLKCmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_GetClocksFreq), (206 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_GetClocksFreq), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_AHBPeriphClockCmd), (24 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_AHBPeriphClockCmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_APB2PeriphClockCmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_APB1PeriphClockCmd), (24 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_APB1PeriphClockCmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_AHBPeriphResetCmd), (24 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_AHBPeriphResetCmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_APB2PeriphResetCmd), (24 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_APB2PeriphResetCmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_APB1PeriphResetCmd), (24 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_APB1PeriphResetCmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_BackupResetCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_BackupResetCmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_ClockSecuritySystemCmd), (10 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_ClockSecuritySystemCmd), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_MCOConfig), (12 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_MCOConfig), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_ClearFlag), (18 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_ClearFlag), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_GetITStatus), (18 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_GetITStatus), (8 bytes).
+    Removing stm32f10x_rcc.o(.text.RCC_ClearITPendingBit), (12 bytes).
+    Removing stm32f10x_rcc.o(.ARM.exidx.text.RCC_ClearITPendingBit), (8 bytes).
+    Removing stm32f10x_rcc.o(.rodata.APBAHBPrescTable), (16 bytes).
+    Removing stm32f10x_rcc.o(.rodata.ADCPrescTable), (4 bytes).
+    Removing stm32f10x_spi.o(.text), (0 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_I2S_DeInit), (104 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_DeInit), (8 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_Init), (8 bytes).
+    Removing stm32f10x_spi.o(.text.I2S_Init), (296 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.I2S_Init), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_StructInit), (16 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_StructInit), (8 bytes).
+    Removing stm32f10x_spi.o(.text.I2S_StructInit), (14 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.I2S_StructInit), (8 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_Cmd), (8 bytes).
+    Removing stm32f10x_spi.o(.text.I2S_Cmd), (20 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.I2S_Cmd), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_I2S_ITConfig), (24 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_ITConfig), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_I2S_DMACmd), (16 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_DMACmd), (8 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_SendData), (8 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_ReceiveData), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_NSSInternalSoftwareConfig), (24 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_NSSInternalSoftwareConfig), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_SSOutputCmd), (20 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_SSOutputCmd), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_DataSizeConfig), (16 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_DataSizeConfig), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_TransmitCRC), (10 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_TransmitCRC), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_CalculateCRC), (20 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_CalculateCRC), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_GetCRC), (12 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_GetCRC), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_GetCRCPolynomial), (4 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_GetCRCPolynomial), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_BiDirectionalLineConfig), (24 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_BiDirectionalLineConfig), (8 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_GetFlagStatus), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_I2S_ClearFlag), (6 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_ClearFlag), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_I2S_GetITStatus), (24 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_GetITStatus), (8 bytes).
+    Removing stm32f10x_spi.o(.text.SPI_I2S_ClearITPendingBit), (16 bytes).
+    Removing stm32f10x_spi.o(.ARM.exidx.text.SPI_I2S_ClearITPendingBit), (8 bytes).
+    Removing stm32f10x_exti.o(.text), (0 bytes).
+    Removing stm32f10x_exti.o(.text.EXTI_DeInit), (30 bytes).
+    Removing stm32f10x_exti.o(.ARM.exidx.text.EXTI_DeInit), (8 bytes).
+    Removing stm32f10x_exti.o(.text.EXTI_Init), (104 bytes).
+    Removing stm32f10x_exti.o(.ARM.exidx.text.EXTI_Init), (8 bytes).
+    Removing stm32f10x_exti.o(.text.EXTI_StructInit), (14 bytes).
+    Removing stm32f10x_exti.o(.ARM.exidx.text.EXTI_StructInit), (8 bytes).
+    Removing stm32f10x_exti.o(.text.EXTI_GenerateSWInterrupt), (16 bytes).
+    Removing stm32f10x_exti.o(.ARM.exidx.text.EXTI_GenerateSWInterrupt), (8 bytes).
+    Removing stm32f10x_exti.o(.text.EXTI_GetFlagStatus), (18 bytes).
+    Removing stm32f10x_exti.o(.ARM.exidx.text.EXTI_GetFlagStatus), (8 bytes).
+    Removing stm32f10x_exti.o(.text.EXTI_ClearFlag), (12 bytes).
+    Removing stm32f10x_exti.o(.ARM.exidx.text.EXTI_ClearFlag), (8 bytes).
+    Removing stm32f10x_exti.o(.text.EXTI_GetITStatus), (30 bytes).
+    Removing stm32f10x_exti.o(.ARM.exidx.text.EXTI_GetITStatus), (8 bytes).
+    Removing stm32f10x_exti.o(.text.EXTI_ClearITPendingBit), (12 bytes).
+    Removing stm32f10x_exti.o(.ARM.exidx.text.EXTI_ClearITPendingBit), (8 bytes).
+
+461 unused section(s) (total 16488 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/stdlib/rand.c           0x00000000   Number         0  rand.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm\startup_stm32f10x_cl.s 0x00000000   Number         0  startup_stm32f10x_cl.o ABSOLUTE
+    app.c                                    0x00000000   Number         0  app.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    drv_canfdspi_api.c                       0x00000000   Number         0  drv_canfdspi_api.o ABSOLUTE
+    drv_spi.c                                0x00000000   Number         0  drv_spi.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    misc.c                                   0x00000000   Number         0  misc.o ABSOLUTE
+    stm32f10x_exti.c                         0x00000000   Number         0  stm32f10x_exti.o ABSOLUTE
+    stm32f10x_gpio.c                         0x00000000   Number         0  stm32f10x_gpio.o ABSOLUTE
+    stm32f10x_rcc.c                          0x00000000   Number         0  stm32f10x_rcc.o ABSOLUTE
+    stm32f10x_spi.c                          0x00000000   Number         0  stm32f10x_spi.o ABSOLUTE
+    system_stm32f10x.c                       0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    RESET                                    0x08000000   Section      336  startup_stm32f10x_cl.o(RESET)
+    .ARM.Collect$$$$00000000                 0x08000150   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x08000150   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x08000154   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x08000158   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x08000158   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x08000158   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x08000160   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x08000160   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x08000160   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x08000160   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x08000164   Section       36  startup_stm32f10x_cl.o(.text)
+    .text                                    0x08000188   Section        0  rand.o(.text)
+    .text                                    0x080001ac   Section        0  memcpya.o(.text)
+    .text                                    0x080001d0   Section        0  memseta.o(.text)
+    .text                                    0x080001f4   Section       36  init.o(.text)
+    [Anonymous Symbol]                       0x08000218   Section        0  app.o(.text.APP_CANFDSPI_Init)
+    [Anonymous Symbol]                       0x08000308   Section        0  app.o(.text.APP_Initialize)
+    [Anonymous Symbol]                       0x080003ac   Section        0  app.o(.text.APP_PayLoad_Tasks)
+    [Anonymous Symbol]                       0x0800047c   Section        0  app.o(.text.APP_ReceiveMessage_Tasks)
+    [Anonymous Symbol]                       0x08000614   Section        0  app.o(.text.APP_Tasks)
+    [Anonymous Symbol]                       0x08000804   Section        0  app.o(.text.APP_TestRamAccess)
+    [Anonymous Symbol]                       0x080008b8   Section        0  app.o(.text.APP_TestRegisterAccess)
+    [Anonymous Symbol]                       0x08000974   Section        0  app.o(.text.APP_TransmitMessageQueue)
+    [Anonymous Symbol]                       0x08000a10   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure)
+    [Anonymous Symbol]                       0x08000bd0   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData10MHz)
+    [Anonymous Symbol]                       0x08000cb8   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz)
+    [Anonymous Symbol]                       0x08000d94   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz)
+    [Anonymous Symbol]                       0x08000e84   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_Configure)
+    [Anonymous Symbol]                       0x08000ef8   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ConfigureObjectReset)
+    [Anonymous Symbol]                       0x08000f0c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_DlcToDataBytes)
+    [Anonymous Symbol]                       0x08000f34   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEnable)
+    [Anonymous Symbol]                       0x08000f8c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountStateGet)
+    [Anonymous Symbol]                       0x0800100c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterMaskConfigure)
+    [Anonymous Symbol]                       0x0800105c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterObjectConfigure)
+    [Anonymous Symbol]                       0x080010ac   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterToFifoLink)
+    [Anonymous Symbol]                       0x080010dc   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioModeConfigure)
+    [Anonymous Symbol]                       0x08001148   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventEnable)
+    [Anonymous Symbol]                       0x080011dc   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeSelect)
+    [Anonymous Symbol]                       0x0800123c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_RamInit)
+    [Anonymous Symbol]                       0x0800129c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray)
+    [Anonymous Symbol]                       0x08001308   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigure)
+    [Anonymous Symbol]                       0x08001380   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset)
+    [Anonymous Symbol]                       0x08001390   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventEnable)
+    [Anonymous Symbol]                       0x0800140c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet)
+    [Anonymous Symbol]                       0x0800159c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_Reset)
+    [Anonymous Symbol]                       0x080015bc   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigure)
+    [Anonymous Symbol]                       0x0800162c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset)
+    [Anonymous Symbol]                       0x08001638   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventGet)
+    [Anonymous Symbol]                       0x08001684   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad)
+    [Anonymous Symbol]                       0x08001828   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArray)
+    [Anonymous Symbol]                       0x0800187c   Section        0  drv_spi.o(.text.DRV_SPI_Initialize)
+    [Anonymous Symbol]                       0x08001900   Section        0  drv_spi.o(.text.DRV_SPI_TransferData)
+    [Anonymous Symbol]                       0x08001964   Section        0  stm32f10x_gpio.o(.text.GPIO_Init)
+    [Anonymous Symbol]                       0x08001a24   Section        0  stm32f10x_gpio.o(.text.GPIO_PinRemapConfig)
+    [Anonymous Symbol]                       0x08001aa0   Section        0  stm32f10x_gpio.o(.text.GPIO_ReadInputDataBit)
+    [Anonymous Symbol]                       0x08001aac   Section        0  stm32f10x_gpio.o(.text.GPIO_ResetBits)
+    [Anonymous Symbol]                       0x08001ab0   Section        0  stm32f10x_gpio.o(.text.GPIO_SetBits)
+    [Anonymous Symbol]                       0x08001ab4   Section        0  stm32f10x_rcc.o(.text.RCC_APB2PeriphClockCmd)
+    [Anonymous Symbol]                       0x08001acc   Section        0  stm32f10x_spi.o(.text.SPI_Cmd)
+    [Anonymous Symbol]                       0x08001ae0   Section        0  stm32f10x_spi.o(.text.SPI_I2S_GetFlagStatus)
+    [Anonymous Symbol]                       0x08001aec   Section        0  stm32f10x_spi.o(.text.SPI_I2S_ReceiveData)
+    [Anonymous Symbol]                       0x08001af0   Section        0  stm32f10x_spi.o(.text.SPI_I2S_SendData)
+    [Anonymous Symbol]                       0x08001af4   Section        0  stm32f10x_spi.o(.text.SPI_Init)
+    [Anonymous Symbol]                       0x08001b3c   Section        0  system_stm32f10x.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x08001c8c   Section        0  main.o(.text.main)
+    i.__scatterload_copy                     0x08001c96   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08001ca4   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08001ca6   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz 0x08001cb4   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.13 0x08001cfc   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.13)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14 0x08001d44   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.15 0x08001d8c   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.15)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz 0x08001dd4   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.10 0x08001e1c   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.10)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.11 0x08001e64   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.11)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.7 0x08001eac   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.7)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.8 0x08001ef4   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.8)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz 0x08001f3c   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16 0x08001f84   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz 0x08001fcc   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12 0x08002014   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz 0x0800205c   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6 0x080020a4   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6)
+    .Lswitch.table.DRV_CANFDSPI_DlcToDataBytes 0x080020ec   Data          28  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_DlcToDataBytes)
+    _rand_state                              0x20000000   Data           4  rand.o(.data)
+    .data                                    0x20000000   Section        4  rand.o(.data)
+    STACK                                    0x20000190   Section     2048  startup_stm32f10x_cl.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x00000150   Number         0  startup_stm32f10x_cl.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f10x_cl.o(RESET)
+    __Vectors_End                            0x08000150   Data           0  startup_stm32f10x_cl.o(RESET)
+    __main                                   0x08000151   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x08000151   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x08000155   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x08000159   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x08000159   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x08000159   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x08000159   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x08000161   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x08000161   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x08000165   Thumb Code     8  startup_stm32f10x_cl.o(.text)
+    NMI_Handler                              0x0800016d   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    HardFault_Handler                        0x0800016f   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    MemManage_Handler                        0x08000171   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    BusFault_Handler                         0x08000173   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    UsageFault_Handler                       0x08000175   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    SVC_Handler                              0x08000177   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    DebugMon_Handler                         0x08000179   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    PendSV_Handler                           0x0800017b   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    SysTick_Handler                          0x0800017d   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    ADC1_2_IRQHandler                        0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN1_RX0_IRQHandler                      0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN1_RX1_IRQHandler                      0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN1_SCE_IRQHandler                      0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN1_TX_IRQHandler                       0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN2_RX0_IRQHandler                      0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN2_RX1_IRQHandler                      0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN2_SCE_IRQHandler                      0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN2_TX_IRQHandler                       0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel1_IRQHandler                 0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel2_IRQHandler                 0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel3_IRQHandler                 0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel4_IRQHandler                 0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel5_IRQHandler                 0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel6_IRQHandler                 0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel7_IRQHandler                 0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA2_Channel1_IRQHandler                 0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA2_Channel2_IRQHandler                 0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA2_Channel3_IRQHandler                 0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA2_Channel4_IRQHandler                 0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA2_Channel5_IRQHandler                 0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    ETH_IRQHandler                           0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    ETH_WKUP_IRQHandler                      0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI0_IRQHandler                         0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI15_10_IRQHandler                     0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI1_IRQHandler                         0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI2_IRQHandler                         0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI3_IRQHandler                         0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI4_IRQHandler                         0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI9_5_IRQHandler                       0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    FLASH_IRQHandler                         0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    I2C1_ER_IRQHandler                       0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    I2C1_EV_IRQHandler                       0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    I2C2_ER_IRQHandler                       0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    I2C2_EV_IRQHandler                       0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    OTG_FS_IRQHandler                        0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    OTG_FS_WKUP_IRQHandler                   0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    PVD_IRQHandler                           0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    RCC_IRQHandler                           0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    RTCAlarm_IRQHandler                      0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    RTC_IRQHandler                           0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    SPI1_IRQHandler                          0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    SPI2_IRQHandler                          0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    SPI3_IRQHandler                          0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TAMPER_IRQHandler                        0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM1_BRK_IRQHandler                      0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM1_CC_IRQHandler                       0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM1_UP_IRQHandler                       0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM2_IRQHandler                          0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM3_IRQHandler                          0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM4_IRQHandler                          0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM5_IRQHandler                          0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM6_IRQHandler                          0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM7_IRQHandler                          0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    UART4_IRQHandler                         0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    UART5_IRQHandler                         0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    USART1_IRQHandler                        0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    USART2_IRQHandler                        0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    USART3_IRQHandler                        0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    WWDG_IRQHandler                          0x0800017f   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    rand                                     0x08000189   Thumb Code    20  rand.o(.text)
+    srand                                    0x0800019d   Thumb Code     6  rand.o(.text)
+    __aeabi_memcpy                           0x080001ad   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x080001ad   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x080001ad   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memset                           0x080001d1   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x080001d1   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x080001d1   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x080001df   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x080001df   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x080001df   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x080001e3   Thumb Code    18  memseta.o(.text)
+    __scatterload                            0x080001f5   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x080001f5   Thumb Code     0  init.o(.text)
+    APP_CANFDSPI_Init                        0x08000219   Thumb Code   240  app.o(.text.APP_CANFDSPI_Init)
+    APP_Initialize                           0x08000309   Thumb Code   164  app.o(.text.APP_Initialize)
+    APP_PayLoad_Tasks                        0x080003ad   Thumb Code   206  app.o(.text.APP_PayLoad_Tasks)
+    APP_ReceiveMessage_Tasks                 0x0800047d   Thumb Code   406  app.o(.text.APP_ReceiveMessage_Tasks)
+    APP_Tasks                                0x08000615   Thumb Code   494  app.o(.text.APP_Tasks)
+    APP_TestRamAccess                        0x08000805   Thumb Code   178  app.o(.text.APP_TestRamAccess)
+    APP_TestRegisterAccess                   0x080008b9   Thumb Code   186  app.o(.text.APP_TestRegisterAccess)
+    APP_TransmitMessageQueue                 0x08000975   Thumb Code   154  app.o(.text.APP_TransmitMessageQueue)
+    DRV_CANFDSPI_BitTimeConfigure            0x08000a11   Thumb Code   446  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure)
+    DRV_CANFDSPI_BitTimeConfigureData10MHz   0x08000bd1   Thumb Code   232  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData10MHz)
+    DRV_CANFDSPI_BitTimeConfigureData20MHz   0x08000cb9   Thumb Code   220  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz)
+    DRV_CANFDSPI_BitTimeConfigureData40MHz   0x08000d95   Thumb Code   240  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz)
+    DRV_CANFDSPI_Configure                   0x08000e85   Thumb Code   114  drv_canfdspi_api.o(.text.DRV_CANFDSPI_Configure)
+    DRV_CANFDSPI_ConfigureObjectReset        0x08000ef9   Thumb Code    20  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ConfigureObjectReset)
+    DRV_CANFDSPI_DlcToDataBytes              0x08000f0d   Thumb Code    38  drv_canfdspi_api.o(.text.DRV_CANFDSPI_DlcToDataBytes)
+    DRV_CANFDSPI_EccEnable                   0x08000f35   Thumb Code    88  drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEnable)
+    DRV_CANFDSPI_ErrorCountStateGet          0x08000f8d   Thumb Code   128  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountStateGet)
+    DRV_CANFDSPI_FilterMaskConfigure         0x0800100d   Thumb Code    80  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterMaskConfigure)
+    DRV_CANFDSPI_FilterObjectConfigure       0x0800105d   Thumb Code    80  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterObjectConfigure)
+    DRV_CANFDSPI_FilterToFifoLink            0x080010ad   Thumb Code    48  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterToFifoLink)
+    DRV_CANFDSPI_GpioModeConfigure           0x080010dd   Thumb Code   108  drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioModeConfigure)
+    DRV_CANFDSPI_ModuleEventEnable           0x08001149   Thumb Code   148  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventEnable)
+    DRV_CANFDSPI_OperationModeSelect         0x080011dd   Thumb Code    94  drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeSelect)
+    DRV_CANFDSPI_RamInit                     0x0800123d   Thumb Code    96  drv_canfdspi_api.o(.text.DRV_CANFDSPI_RamInit)
+    DRV_CANFDSPI_ReadByteArray               0x0800129d   Thumb Code   108  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray)
+    DRV_CANFDSPI_ReceiveChannelConfigure     0x08001309   Thumb Code   120  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigure)
+    DRV_CANFDSPI_ReceiveChannelConfigureObjectReset 0x08001381   Thumb Code    14  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset)
+    DRV_CANFDSPI_ReceiveChannelEventEnable   0x08001391   Thumb Code   124  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventEnable)
+    DRV_CANFDSPI_ReceiveMessageGet           0x0800140d   Thumb Code   398  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet)
+    DRV_CANFDSPI_Reset                       0x0800159d   Thumb Code    30  drv_canfdspi_api.o(.text.DRV_CANFDSPI_Reset)
+    DRV_CANFDSPI_TransmitChannelConfigure    0x080015bd   Thumb Code   112  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigure)
+    DRV_CANFDSPI_TransmitChannelConfigureObjectReset 0x0800162d   Thumb Code    10  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset)
+    DRV_CANFDSPI_TransmitChannelEventGet     0x08001639   Thumb Code    74  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventGet)
+    DRV_CANFDSPI_TransmitChannelLoad         0x08001685   Thumb Code   418  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad)
+    DRV_CANFDSPI_WriteByteArray              0x08001829   Thumb Code    84  drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArray)
+    DRV_SPI_Initialize                       0x0800187d   Thumb Code   130  drv_spi.o(.text.DRV_SPI_Initialize)
+    DRV_SPI_TransferData                     0x08001901   Thumb Code   100  drv_spi.o(.text.DRV_SPI_TransferData)
+    GPIO_Init                                0x08001965   Thumb Code   192  stm32f10x_gpio.o(.text.GPIO_Init)
+    GPIO_PinRemapConfig                      0x08001a25   Thumb Code   122  stm32f10x_gpio.o(.text.GPIO_PinRemapConfig)
+    GPIO_ReadInputDataBit                    0x08001aa1   Thumb Code    10  stm32f10x_gpio.o(.text.GPIO_ReadInputDataBit)
+    GPIO_ResetBits                           0x08001aad   Thumb Code     4  stm32f10x_gpio.o(.text.GPIO_ResetBits)
+    GPIO_SetBits                             0x08001ab1   Thumb Code     4  stm32f10x_gpio.o(.text.GPIO_SetBits)
+    RCC_APB2PeriphClockCmd                   0x08001ab5   Thumb Code    24  stm32f10x_rcc.o(.text.RCC_APB2PeriphClockCmd)
+    SPI_Cmd                                  0x08001acd   Thumb Code    20  stm32f10x_spi.o(.text.SPI_Cmd)
+    SPI_I2S_GetFlagStatus                    0x08001ae1   Thumb Code    10  stm32f10x_spi.o(.text.SPI_I2S_GetFlagStatus)
+    SPI_I2S_ReceiveData                      0x08001aed   Thumb Code     4  stm32f10x_spi.o(.text.SPI_I2S_ReceiveData)
+    SPI_I2S_SendData                         0x08001af1   Thumb Code     4  stm32f10x_spi.o(.text.SPI_I2S_SendData)
+    SPI_Init                                 0x08001af5   Thumb Code    70  stm32f10x_spi.o(.text.SPI_Init)
+    SystemInit                               0x08001b3d   Thumb Code   336  system_stm32f10x.o(.text.SystemInit)
+    main                                     0x08001c8d   Thumb Code    10  main.o(.text.main)
+    __scatterload_copy                       0x08001c97   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08001ca5   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08001ca7   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x08002108   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002128   Number         0  anon$$obj.o(Region$$Table)
+    delayCount                               0x20000004   Data           4  app.o(.data.delayCount)
+    appData                                  0x20000008   Data           1  app.o(.bss.appData)
+    config                                   0x2000000c   Data           4  app.o(.bss.config)
+    errorFlags                               0x20000010   Data           1  app.o(.bss.errorFlags)
+    fObj                                     0x20000014   Data           4  app.o(.bss.fObj)
+    i                                        0x20000018   Data           1  app.o(.bss.i)
+    lastSwitchState                          0x20000019   Data           1  app.o(.bss.lastSwitchState)
+    ledCount                                 0x2000001a   Data           1  app.o(.bss.ledCount)
+    ledState                                 0x2000001b   Data           1  app.o(.bss.ledState)
+    mObj                                     0x2000001c   Data           4  app.o(.bss.mObj)
+    payload                                  0x20000020   Data           6  app.o(.bss.payload)
+    rec                                      0x20000026   Data           1  app.o(.bss.rec)
+    rxConfig                                 0x20000028   Data           4  app.o(.bss.rxConfig)
+    rxObj                                    0x2000002c   Data          12  app.o(.bss.rxObj)
+    rxd                                      0x20000038   Data          64  app.o(.bss.rxd)
+    spiReceiveBuffer                         0x20000078   Data          96  drv_canfdspi_api.o(.bss.spiReceiveBuffer)
+    spiTransmitBuffer                        0x200000d8   Data          96  drv_canfdspi_api.o(.bss.spiTransmitBuffer)
+    tec                                      0x20000138   Data           1  app.o(.bss.tec)
+    txConfig                                 0x2000013c   Data           4  app.o(.bss.txConfig)
+    txFlags                                  0x20000140   Data           1  app.o(.bss.txFlags)
+    txObj                                    0x20000144   Data          12  app.o(.bss.txObj)
+    txd                                      0x20000150   Data          64  app.o(.bss.txd)
+    __initial_sp                             0x20000990   Data           0  startup_stm32f10x_cl.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x08000151
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002130, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002128, Max: 0x00020000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x00000150   Data   RO           17    RESET               startup_stm32f10x_cl.o
+    0x08000150   0x08000150   0x00000000   Code   RO          626  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000150   0x08000150   0x00000004   Code   RO          638    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000154   0x08000154   0x00000004   Code   RO          641    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000158   0x08000158   0x00000000   Code   RO          643    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000158   0x08000158   0x00000000   Code   RO          645    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000158   0x08000158   0x00000008   Code   RO          646    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000160   0x08000160   0x00000000   Code   RO          648    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000160   0x08000160   0x00000000   Code   RO          650    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000160   0x08000160   0x00000004   Code   RO          639    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000164   0x08000164   0x00000024   Code   RO           18    .text               startup_stm32f10x_cl.o
+    0x08000188   0x08000188   0x00000024   Code   RO          629    .text               mc_w.l(rand.o)
+    0x080001ac   0x080001ac   0x00000024   Code   RO          632    .text               mc_w.l(memcpya.o)
+    0x080001d0   0x080001d0   0x00000024   Code   RO          634    .text               mc_w.l(memseta.o)
+    0x080001f4   0x080001f4   0x00000024   Code   RO          652    .text               mc_w.l(init.o)
+    0x08000218   0x08000218   0x000000f0   Code   RO           44    .text.APP_CANFDSPI_Init  app.o
+    0x08000308   0x08000308   0x000000a4   Code   RO           40    .text.APP_Initialize  app.o
+    0x080003ac   0x080003ac   0x000000ce   Code   RO           48    .text.APP_PayLoad_Tasks  app.o
+    0x0800047a   0x0800047a   0x00000002   PAD
+    0x0800047c   0x0800047c   0x00000196   Code   RO           46    .text.APP_ReceiveMessage_Tasks  app.o
+    0x08000612   0x08000612   0x00000002   PAD
+    0x08000614   0x08000614   0x000001ee   Code   RO           42    .text.APP_Tasks     app.o
+    0x08000802   0x08000802   0x00000002   PAD
+    0x08000804   0x08000804   0x000000b2   Code   RO           52    .text.APP_TestRamAccess  app.o
+    0x080008b6   0x080008b6   0x00000002   PAD
+    0x080008b8   0x080008b8   0x000000ba   Code   RO           54    .text.APP_TestRegisterAccess  app.o
+    0x08000972   0x08000972   0x00000002   PAD
+    0x08000974   0x08000974   0x0000009a   Code   RO           56    .text.APP_TransmitMessageQueue  app.o
+    0x08000a0e   0x08000a0e   0x00000002   PAD
+    0x08000a10   0x08000a10   0x000001be   Code   RO          314    .text.DRV_CANFDSPI_BitTimeConfigure  drv_canfdspi_api.o
+    0x08000bce   0x08000bce   0x00000002   PAD
+    0x08000bd0   0x08000bd0   0x000000e8   Code   RO          326    .text.DRV_CANFDSPI_BitTimeConfigureData10MHz  drv_canfdspi_api.o
+    0x08000cb8   0x08000cb8   0x000000dc   Code   RO          322    .text.DRV_CANFDSPI_BitTimeConfigureData20MHz  drv_canfdspi_api.o
+    0x08000d94   0x08000d94   0x000000f0   Code   RO          318    .text.DRV_CANFDSPI_BitTimeConfigureData40MHz  drv_canfdspi_api.o
+    0x08000e84   0x08000e84   0x00000072   Code   RO          122    .text.DRV_CANFDSPI_Configure  drv_canfdspi_api.o
+    0x08000ef6   0x08000ef6   0x00000002   PAD
+    0x08000ef8   0x08000ef8   0x00000014   Code   RO          124    .text.DRV_CANFDSPI_ConfigureObjectReset  drv_canfdspi_api.o
+    0x08000f0c   0x08000f0c   0x00000026   Code   RO          144    .text.DRV_CANFDSPI_DlcToDataBytes  drv_canfdspi_api.o
+    0x08000f32   0x08000f32   0x00000002   PAD
+    0x08000f34   0x08000f34   0x00000058   Code   RO          264    .text.DRV_CANFDSPI_EccEnable  drv_canfdspi_api.o
+    0x08000f8c   0x08000f8c   0x00000080   Code   RO          258    .text.DRV_CANFDSPI_ErrorCountStateGet  drv_canfdspi_api.o
+    0x0800100c   0x0800100c   0x00000050   Code   RO          168    .text.DRV_CANFDSPI_FilterMaskConfigure  drv_canfdspi_api.o
+    0x0800105c   0x0800105c   0x00000050   Code   RO          166    .text.DRV_CANFDSPI_FilterObjectConfigure  drv_canfdspi_api.o
+    0x080010ac   0x080010ac   0x00000030   Code   RO          170    .text.DRV_CANFDSPI_FilterToFifoLink  drv_canfdspi_api.o
+    0x080010dc   0x080010dc   0x0000006c   Code   RO          328    .text.DRV_CANFDSPI_GpioModeConfigure  drv_canfdspi_api.o
+    0x08001148   0x08001148   0x00000094   Code   RO          202    .text.DRV_CANFDSPI_ModuleEventEnable  drv_canfdspi_api.o
+    0x080011dc   0x080011dc   0x0000005e   Code   RO          126    .text.DRV_CANFDSPI_OperationModeSelect  drv_canfdspi_api.o
+    0x0800123a   0x0800123a   0x00000002   PAD
+    0x0800123c   0x0800123c   0x00000060   Code   RO          292    .text.DRV_CANFDSPI_RamInit  drv_canfdspi_api.o
+    0x0800129c   0x0800129c   0x0000006c   Code   RO          110    .text.DRV_CANFDSPI_ReadByteArray  drv_canfdspi_api.o
+    0x08001308   0x08001308   0x00000078   Code   RO          178    .text.DRV_CANFDSPI_ReceiveChannelConfigure  drv_canfdspi_api.o
+    0x08001380   0x08001380   0x0000000e   Code   RO          180    .text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset  drv_canfdspi_api.o
+    0x0800138e   0x0800138e   0x00000002   PAD
+    0x08001390   0x08001390   0x0000007c   Code   RO          238    .text.DRV_CANFDSPI_ReceiveChannelEventEnable  drv_canfdspi_api.o
+    0x0800140c   0x0800140c   0x0000018e   Code   RO          184    .text.DRV_CANFDSPI_ReceiveMessageGet  drv_canfdspi_api.o
+    0x0800159a   0x0800159a   0x00000002   PAD
+    0x0800159c   0x0800159c   0x0000001e   Code   RO           90    .text.DRV_CANFDSPI_Reset  drv_canfdspi_api.o
+    0x080015ba   0x080015ba   0x00000002   PAD
+    0x080015bc   0x080015bc   0x00000070   Code   RO          134    .text.DRV_CANFDSPI_TransmitChannelConfigure  drv_canfdspi_api.o
+    0x0800162c   0x0800162c   0x0000000a   Code   RO          136    .text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset  drv_canfdspi_api.o
+    0x08001636   0x08001636   0x00000002   PAD
+    0x08001638   0x08001638   0x0000004a   Code   RO          216    .text.DRV_CANFDSPI_TransmitChannelEventGet  drv_canfdspi_api.o
+    0x08001682   0x08001682   0x00000002   PAD
+    0x08001684   0x08001684   0x000001a2   Code   RO          142    .text.DRV_CANFDSPI_TransmitChannelLoad  drv_canfdspi_api.o
+    0x08001826   0x08001826   0x00000002   PAD
+    0x08001828   0x08001828   0x00000054   Code   RO          114    .text.DRV_CANFDSPI_WriteByteArray  drv_canfdspi_api.o
+    0x0800187c   0x0800187c   0x00000082   Code   RO          378    .text.DRV_SPI_Initialize  drv_spi.o
+    0x080018fe   0x080018fe   0x00000002   PAD
+    0x08001900   0x08001900   0x00000064   Code   RO          382    .text.DRV_SPI_TransferData  drv_spi.o
+    0x08001964   0x08001964   0x000000c0   Code   RO          416    .text.GPIO_Init     stm32f10x_gpio.o
+    0x08001a24   0x08001a24   0x0000007a   Code   RO          442    .text.GPIO_PinRemapConfig  stm32f10x_gpio.o
+    0x08001a9e   0x08001a9e   0x00000002   PAD
+    0x08001aa0   0x08001aa0   0x0000000a   Code   RO          420    .text.GPIO_ReadInputDataBit  stm32f10x_gpio.o
+    0x08001aaa   0x08001aaa   0x00000002   PAD
+    0x08001aac   0x08001aac   0x00000004   Code   RO          430    .text.GPIO_ResetBits  stm32f10x_gpio.o
+    0x08001ab0   0x08001ab0   0x00000004   Code   RO          428    .text.GPIO_SetBits  stm32f10x_gpio.o
+    0x08001ab4   0x08001ab4   0x00000018   Code   RO          517    .text.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o
+    0x08001acc   0x08001acc   0x00000014   Code   RO          559    .text.SPI_Cmd       stm32f10x_spi.o
+    0x08001ae0   0x08001ae0   0x0000000a   Code   RO          587    .text.SPI_I2S_GetFlagStatus  stm32f10x_spi.o
+    0x08001aea   0x08001aea   0x00000002   PAD
+    0x08001aec   0x08001aec   0x00000004   Code   RO          569    .text.SPI_I2S_ReceiveData  stm32f10x_spi.o
+    0x08001af0   0x08001af0   0x00000004   Code   RO          567    .text.SPI_I2S_SendData  stm32f10x_spi.o
+    0x08001af4   0x08001af4   0x00000046   Code   RO          551    .text.SPI_Init      stm32f10x_spi.o
+    0x08001b3a   0x08001b3a   0x00000002   PAD
+    0x08001b3c   0x08001b3c   0x00000150   Code   RO            2    .text.SystemInit    system_stm32f10x.o
+    0x08001c8c   0x08001c8c   0x0000000a   Code   RO           25    .text.main          main.o
+    0x08001c96   0x08001c96   0x0000000e   Code   RO          656    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08001ca4   0x08001ca4   0x00000002   Code   RO          657    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08001ca6   0x08001ca6   0x0000000e   Code   RO          658    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08001cb4   0x08001cb4   0x00000048   Data   RO          364    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz  drv_canfdspi_api.o
+    0x08001cfc   0x08001cfc   0x00000048   Data   RO          365    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.13  drv_canfdspi_api.o
+    0x08001d44   0x08001d44   0x00000048   Data   RO          366    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14  drv_canfdspi_api.o
+    0x08001d8c   0x08001d8c   0x00000048   Data   RO          367    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.15  drv_canfdspi_api.o
+    0x08001dd4   0x08001dd4   0x00000048   Data   RO          357    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz  drv_canfdspi_api.o
+    0x08001e1c   0x08001e1c   0x00000048   Data   RO          360    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.10  drv_canfdspi_api.o
+    0x08001e64   0x08001e64   0x00000048   Data   RO          361    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.11  drv_canfdspi_api.o
+    0x08001eac   0x08001eac   0x00000048   Data   RO          358    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.7  drv_canfdspi_api.o
+    0x08001ef4   0x08001ef4   0x00000048   Data   RO          359    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.8  drv_canfdspi_api.o
+    0x08001f3c   0x08001f3c   0x00000048   Data   RO          368    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz  drv_canfdspi_api.o
+    0x08001f84   0x08001f84   0x00000048   Data   RO          369    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16  drv_canfdspi_api.o
+    0x08001fcc   0x08001fcc   0x00000048   Data   RO          362    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz  drv_canfdspi_api.o
+    0x08002014   0x08002014   0x00000048   Data   RO          363    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12  drv_canfdspi_api.o
+    0x0800205c   0x0800205c   0x00000048   Data   RO          355    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz  drv_canfdspi_api.o
+    0x080020a4   0x080020a4   0x00000048   Data   RO          356    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6  drv_canfdspi_api.o
+    0x080020ec   0x080020ec   0x0000001c   Data   RO          354    .rodata..Lswitch.table.DRV_CANFDSPI_DlcToDataBytes  drv_canfdspi_api.o
+    0x08002108   0x08002108   0x00000020   Data   RO          655    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002128, Size: 0x00000990, Max: 0x00010000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08002128   0x00000004   Data   RW          630    .data               mc_w.l(rand.o)
+    0x20000004   0x0800212c   0x00000004   Data   RW           58    .data.delayCount    app.o
+    0x20000008        -       0x00000001   Zero   RW           63    .bss.appData        app.o
+    0x20000009   0x08002130   0x00000003   PAD
+    0x2000000c        -       0x00000004   Zero   RW           66    .bss.config         app.o
+    0x20000010        -       0x00000001   Zero   RW           77    .bss.errorFlags     app.o
+    0x20000011   0x08002130   0x00000003   PAD
+    0x20000014        -       0x00000004   Zero   RW           69    .bss.fObj           app.o
+    0x20000018        -       0x00000001   Zero   RW           61    .bss.i              app.o
+    0x20000019        -       0x00000001   Zero   RW           62    .bss.lastSwitchState  app.o
+    0x2000001a        -       0x00000001   Zero   RW           59    .bss.ledCount       app.o
+    0x2000001b        -       0x00000001   Zero   RW           60    .bss.ledState       app.o
+    0x2000001c        -       0x00000004   Zero   RW           70    .bss.mObj           app.o
+    0x20000020        -       0x00000006   Zero   RW           73    .bss.payload        app.o
+    0x20000026        -       0x00000001   Zero   RW           76    .bss.rec            app.o
+    0x20000027   0x08002130   0x00000001   PAD
+    0x20000028        -       0x00000004   Zero   RW           68    .bss.rxConfig       app.o
+    0x2000002c        -       0x0000000c   Zero   RW           71    .bss.rxObj          app.o
+    0x20000038        -       0x00000040   Zero   RW           72    .bss.rxd            app.o
+    0x20000078        -       0x00000060   Zero   RW          353    .bss.spiReceiveBuffer  drv_canfdspi_api.o
+    0x200000d8        -       0x00000060   Zero   RW          352    .bss.spiTransmitBuffer  drv_canfdspi_api.o
+    0x20000138        -       0x00000001   Zero   RW           75    .bss.tec            app.o
+    0x20000139   0x08002130   0x00000003   PAD
+    0x2000013c        -       0x00000004   Zero   RW           67    .bss.txConfig       app.o
+    0x20000140        -       0x00000001   Zero   RW           74    .bss.txFlags        app.o
+    0x20000141   0x08002130   0x00000003   PAD
+    0x20000144        -       0x0000000c   Zero   RW           64    .bss.txObj          app.o
+    0x20000150        -       0x00000040   Zero   RW           65    .bss.txd            app.o
+    0x20000190        -       0x00000800   Zero   RW           15    STACK               startup_stm32f10x_cl.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      2028         10          0          4        187      15898   app.o
+      3672         18       1108          0        192     115653   drv_canfdspi_api.o
+       230          0          0          0          0       3804   drv_spi.o
+        10          0          0          0          0        483   main.o
+        36          8        336          0       2048       1020   startup_stm32f10x_cl.o
+       332          0          0          0          0       6167   stm32f10x_gpio.o
+        24          0          0          0          0      10469   stm32f10x_rcc.o
+       108          0          0          0          0       7958   stm32f10x_spi.o
+       336          0          0          0          0       3198   system_stm32f10x.o
+
+    ----------------------------------------------------------------------
+      6818         36       1476          4       2440     164650   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        42          0          0          0         13          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        36          0          0          0          0         68   memcpya.o
+        36          0          0          0          0        108   memseta.o
+        36         10          0          4          0        136   rand.o
+
+    ----------------------------------------------------------------------
+       194         26          0          4          0        380   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       194         26          0          4          0        380   mc_w.l
+
+    ----------------------------------------------------------------------
+       194         26          0          4          0        380   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      7012         62       1476          8       2440     164990   Grand Totals
+      7012         62       1476          8       2440     164990   ELF Image Totals
+      7012         62       1476          8          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 8488 (   8.29kB)
+    Total RW  Size (RW Data + ZI Data)              2448 (   2.39kB)
+    Total ROM Size (Code + RO Data + RW Data)       8496 (   8.30kB)
+
+==============================================================================
+

@@ -1,0 +1,69 @@
+<html>
+<body>
+<pre>
+<h1>�Vision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: andy lee, yzu, LIC=9WSKC-7XI4M-EVH1R-KRPQV-MV3YE-ZY1HM
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\t1096\Downloads\Copy of STM32 CAN_FD开发板资料-2022\STM32 CAN_FD开发板资料-2022\程序\CAN底板硬件检测程序\CAN底板硬件检测程序\CAN\CAN.uvprojx
+Project File Date:  05/09/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'STM32F105 Flash'
+assembling startup_stm32f10x_cl.s...
+compiling misc.c...
+compiling system_stm32f10x.c...
+User/CAN.c(16): warning: non-portable path to file '"stm32f10x.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "STM32F10x.h"
+         ^~~~~~~~~~~~~
+         "stm32f10x.h"
+User/CAN.c(28): warning: 'STM32F10X_CL' macro redefined [-Wmacro-redefined]
+#define STM32F10X_CL
+        ^
+<command line>(5): note: previous definition is here
+#define STM32F10X_CL 1
+        ^
+2 warnings generated.
+compiling CAN.c...
+compiling stm32f10x_gpio.c...
+compiling CanDemo.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_can.c...
+linking...
+Program Size: Code=4698 RO-data=374 RW-data=0 ZI-data=1144  
+FromELF: creating hex file...
+".\Flash\CanDemo_15.axf" - 0 Error(s), 2 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  C:/Users/t1096/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

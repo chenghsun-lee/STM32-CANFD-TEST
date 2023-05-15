@@ -1,0 +1,16 @@
+.\flash\drv_spi.o: User\spi\drv_spi.c
+.\flash\drv_spi.o: User\spi\drv_spi.h
+.\flash\drv_spi.o: .\User\app\asf.h
+.\flash\drv_spi.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
+.\flash\drv_spi.o: ..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h
+.\flash\drv_spi.o: C:\Keil_V5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\drv_spi.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
+.\flash\drv_spi.o: .\User\stm32f10x_conf.h
+.\flash\drv_spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_can.h
+.\flash\drv_spi.o: ..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
+.\flash\drv_spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h
+.\flash\drv_spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\flash\drv_spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\flash\drv_spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h
+.\flash\drv_spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
+.\flash\drv_spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h

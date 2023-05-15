@@ -1,0 +1,142 @@
+T42A0 001:832.971   SEGGER J-Link V7.82 Log File
+T42A0 001:833.074   DLL Compiled: Oct 13 2022 13:32:51
+T42A0 001:833.079   Logging started @ 2023-05-08 10:36
+T42A0 001:833.084 - 1833.086ms
+T42A0 001:833.093 JLINK_SetWarnOutHandler(...)
+T42A0 001:833.099 - 0.008ms
+T42A0 001:833.104 JLINK_OpenEx(...)
+T42A0 001:833.898   
+  ***** Error: 
+T42A0 001:833.910   Cannot connect to J-Link.
+T42A0 001:838.645 - 5.547ms returns "Cannot connect to J-Link."
+T42A0 001:838.844 
+  ***** 
+T42A0 001:838.855 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T42A0 001:838.863 JLINK_GetHardwareVersion()
+T42A0 001:839.444   
+  ***** Error: 
+T42A0 001:839.454   Cannot connect to J-Link.
+T42A0 001:843.297 - 4.440ms
+T42A0 005:240.317 JLINK_IsOpen()
+T42A0 005:240.339 - 0.024ms returns 0x00
+T42A0 005:240.351 JLINK_EMU_SelectByUSBSN(SerialNo = 0)
+T42A0 005:240.901 - 0.555ms returns 0xFFFFFFFF
+T42A0 005:240.911 JLINK_EnableLog(...)
+T42A0 005:240.916 - 0.006ms
+T42A0 005:240.921 JLINK_SetLogFile(...)
+T42A0 005:240.928 - 0.008ms
+T42A0 005:240.933 JLINK_SetWarnOutHandler(...)
+T42A0 005:240.937 - 0.006ms
+T42A0 005:240.942 JLINK_OpenEx(...)
+T42A0 005:241.552   
+  ***** Error: 
+T42A0 005:241.562   Cannot connect to J-Link.
+T42A0 005:246.986 - 6.050ms returns "Cannot connect to J-Link."
+T42A0 005:247.137 
+  ***** 
+T42A0 005:247.148 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T42A0 005:247.156 JLINK_GetHardwareVersion()
+T42A0 005:247.685   
+  ***** Error: 
+T42A0 005:247.695   Cannot connect to J-Link.
+T42A0 005:252.647 - 5.501ms
+T42A0 007:068.659 JLINK_IsOpen()
+T42A0 007:068.680 - 0.023ms returns 0x00
+T42A0 007:068.686 JLINK_EMU_SelectByUSBSN(SerialNo = 0)
+T42A0 007:069.275 - 0.595ms returns 0xFFFFFFFF
+T42A0 007:069.286 JLINK_EnableLog(...)
+T42A0 007:069.290 - 0.006ms
+T42A0 007:069.296 JLINK_SetLogFile(...)
+T42A0 007:069.301 - 0.007ms
+T42A0 007:069.306 JLINK_SetWarnOutHandler(...)
+T42A0 007:069.310 - 0.006ms
+T42A0 007:069.315 JLINK_OpenEx(...)
+T42A0 007:069.878   
+  ***** Error: 
+T42A0 007:069.889   Cannot connect to J-Link.
+T42A0 007:074.281 - 4.972ms returns "Cannot connect to J-Link."
+T42A0 007:074.456 
+  ***** 
+T42A0 007:074.467 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T42A0 007:074.475 JLINK_GetHardwareVersion()
+T42A0 007:075.037   
+  ***** Error: 
+T42A0 007:075.048   Cannot connect to J-Link.
+T42A0 007:078.796 - 4.326ms
+T42A0 009:229.137 JLINK_IsOpen()
+T42A0 009:229.166 - 0.033ms returns 0x00
+T42A0 009:229.184 JLINK_EMU_SelectByUSBSN(SerialNo = 0)
+T42A0 009:230.021 - 0.847ms returns 0xFFFFFFFF
+T42A0 009:230.038 JLINK_EnableLog(...)
+T42A0 009:230.046 - 0.015ms
+T42A0 009:230.059 JLINK_SetLogFile(...)
+T42A0 009:230.066 - 0.011ms
+T42A0 009:230.075 JLINK_SetWarnOutHandler(...)
+T42A0 009:230.082 - 0.011ms
+T42A0 009:230.091 JLINK_OpenEx(...)
+T42A0 009:230.945   
+  ***** Error: 
+T42A0 009:230.962   Cannot connect to J-Link.
+T42A0 009:237.467 - 7.385ms returns "Cannot connect to J-Link."
+T42A0 009:237.637 
+  ***** 
+T42A0 009:237.648 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T42A0 009:237.656 JLINK_GetHardwareVersion()
+T42A0 009:238.233   
+  ***** Error: 
+T42A0 009:238.244   Cannot connect to J-Link.
+T42A0 009:241.901 - 4.251ms
+T42A0 228:347.222 JLINK_GetDLLVersion()
+T42A0 228:347.251 - 0.032ms returns 78200
+T42A0 228:347.259 
+  ***** 
+T42A0 228:347.265 API Error: API JLINK_CORE_GetFound function called before JLINKARM_Open()
+T42A0 228:347.273 JLINK_CORE_GetFound()
+T42A0 228:347.986   
+  ***** Error: 
+T42A0 228:348.000   Cannot connect to J-Link.
+T42A0 228:353.662 - 6.400ms
+T42A0 228:353.702 
+  ***** 
+T42A0 228:353.712 API Error: API JLINK_GetDebugInfo function called before JLINKARM_Open()
+T42A0 228:353.723 JLINK_GetDebugInfo(0x100 = JLINKARM_ROM_TABLE_ADDR_INDEX)
+T42A0 228:354.345   
+  ***** Error: 
+T42A0 228:354.356   Cannot connect to J-Link.
+T42A0 228:358.291 - 4.573ms
+T42A0 228:358.304 
+  ***** 
+T42A0 228:358.311 API Error: API JLINK_GetDebugInfo function called before JLINKARM_Open()
+T42A0 228:358.356 JLINK_GetDebugInfo(0x01 = Unknown)
+T42A0 228:358.910   
+  ***** Error: 
+T42A0 228:358.920   Cannot connect to J-Link.
+T42A0 228:362.947 - 4.598ms
+T42A0 228:362.959 JLINK_GetDeviceFamily
+T42A0 228:362.964 - 0.007ms returns 0
+T42A0 228:362.969 
+  ***** 
+T42A0 228:362.976 API Error: API JLINK_GetDebugInfo function called before JLINKARM_Open()
+T42A0 228:362.984 JLINK_GetDebugInfo(0x01 = Unknown)
+T42A0 228:363.526   
+  ***** Error: 
+T42A0 228:363.537   Cannot connect to J-Link.
+T42A0 228:368.135 - 5.161ms
+T42A0 228:368.152 JLINK_GetDeviceFamily
+T42A0 228:368.157 - 0.007ms returns 0
+T42A0 228:368.163 
+  ***** 
+T42A0 228:368.169 API Error: API JLINK_GetDebugInfo function called before JLINKARM_Open()
+T42A0 228:368.176 JLINK_GetDebugInfo(0x10F = JLINKARM_DEBUG_INFO_HAS_CORTEX_M_SECURITY_EXT_INDEX)
+T42A0 228:368.812   
+  ***** Error: 
+T42A0 228:368.825   Cannot connect to J-Link.
+T42A0 228:372.739 - 4.570ms
+T42A0 233:910.421 JLINK_IsOpen()
+T42A0 233:910.439 - 0.020ms returns 0x00
+T42A0 233:910.445 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000010) 
+T42A0 233:910.987 - 0.548ms returns 0
+T42A0 391:946.838 JLINK_Close()
+T42A0 391:947.025 - 0.196ms
+T42A0 391:947.051   
+T42A0 391:947.059   Closed
