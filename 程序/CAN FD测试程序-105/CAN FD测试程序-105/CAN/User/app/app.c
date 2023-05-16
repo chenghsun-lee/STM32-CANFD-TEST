@@ -546,7 +546,9 @@ void APP_TransmitSwitchState(void)
 
     bool switchChanged = newSwitchState.S1 != lastSwitchState.S1;
 
-    if (switchChanged) {
+		
+    if (1) {
+		//if (switchChanged) {
         // Transmit new state
         txObj.bF.id.SID = BUTTON_STATUS_ID;
 
@@ -555,7 +557,7 @@ void APP_TransmitSwitchState(void)
         txObj.bF.ctrl.BRS = 1;
         txObj.bF.ctrl.FDF = 1;
 
-        txd[0] = 0;
+        txd[0] = 64;
         if (newSwitchState.S1 == APP_SWITCH_PRESSED) txd[0] += 0x1;
 
         APP_TransmitMessageQueue();

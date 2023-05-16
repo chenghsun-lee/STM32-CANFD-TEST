@@ -80,7 +80,7 @@ void spi_master_init(void)
   GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
 
-								  
+	
   GPIO_InitStructure.GPIO_Pin = SPI_FALSH_CS_PIN;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
