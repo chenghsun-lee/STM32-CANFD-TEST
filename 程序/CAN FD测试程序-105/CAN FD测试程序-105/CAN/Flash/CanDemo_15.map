@@ -45,7 +45,6 @@ Section Cross References
     app.o(.text.APP_Tasks) refers to app.o(.text.APP_TestRegisterAccess) for APP_TestRegisterAccess
     app.o(.text.APP_Tasks) refers to stm32f10x_gpio.o(.text.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
     app.o(.text.APP_Tasks) refers to app.o(.text.APP_TransmitMessageQueue) for APP_TransmitMessageQueue
-    app.o(.text.APP_Tasks) refers to app.o(.bss.lastSwitchState) for lastSwitchState
     app.o(.text.APP_Tasks) refers to app.o(.bss.ledState) for ledState
     app.o(.ARM.exidx.text.APP_Tasks) refers to app.o(.text.APP_Tasks) for [Anonymous Symbol]
     app.o(.text.APP_CANFDSPI_Init) refers to drv_canfdspi_api.o(.text.DRV_CANFDSPI_Reset) for DRV_CANFDSPI_Reset
@@ -97,7 +96,6 @@ Section Cross References
     app.o(.text.APP_TransmitSwitchState) refers to app.o(.bss.txObj) for txObj
     app.o(.text.APP_TransmitSwitchState) refers to app.o(.bss.txd) for txd
     app.o(.text.APP_TransmitSwitchState) refers to app.o(.text.APP_TransmitMessageQueue) for APP_TransmitMessageQueue
-    app.o(.text.APP_TransmitSwitchState) refers to app.o(.bss.lastSwitchState) for lastSwitchState
     app.o(.ARM.exidx.text.APP_TransmitSwitchState) refers to app.o(.text.APP_TransmitSwitchState) for [Anonymous Symbol]
     app.o(.text.APP_TestRamAccess) refers to app.o(.bss.i) for i
     app.o(.text.APP_TestRamAccess) refers to app.o(.bss.txd) for txd
@@ -825,7 +823,7 @@ Removing Unused input sections from the image.
     Removing app.o(.ARM.exidx.text.APP_CANFDSPI_Init), (8 bytes).
     Removing app.o(.ARM.exidx.text.APP_ReceiveMessage_Tasks), (8 bytes).
     Removing app.o(.ARM.exidx.text.APP_PayLoad_Tasks), (8 bytes).
-    Removing app.o(.text.APP_TransmitSwitchState), (94 bytes).
+    Removing app.o(.text.APP_TransmitSwitchState), (130 bytes).
     Removing app.o(.ARM.exidx.text.APP_TransmitSwitchState), (8 bytes).
     Removing app.o(.ARM.exidx.text.APP_TestRamAccess), (8 bytes).
     Removing app.o(.ARM.exidx.text.APP_TestRegisterAccess), (8 bytes).
@@ -1265,7 +1263,7 @@ Removing Unused input sections from the image.
     Removing stm32f10x_exti.o(.text.EXTI_ClearITPendingBit), (12 bytes).
     Removing stm32f10x_exti.o(.ARM.exidx.text.EXTI_ClearITPendingBit), (8 bytes).
 
-461 unused section(s) (total 16486 bytes) removed from the image.
+461 unused section(s) (total 16522 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1327,70 +1325,70 @@ Image Symbol Table
     [Anonymous Symbol]                       0x080003ac   Section        0  app.o(.text.APP_PayLoad_Tasks)
     [Anonymous Symbol]                       0x0800047c   Section        0  app.o(.text.APP_ReceiveMessage_Tasks)
     [Anonymous Symbol]                       0x08000614   Section        0  app.o(.text.APP_Tasks)
-    [Anonymous Symbol]                       0x08000804   Section        0  app.o(.text.APP_TestRamAccess)
-    [Anonymous Symbol]                       0x080008b8   Section        0  app.o(.text.APP_TestRegisterAccess)
-    [Anonymous Symbol]                       0x08000974   Section        0  app.o(.text.APP_TransmitMessageQueue)
-    [Anonymous Symbol]                       0x08000a10   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure)
-    [Anonymous Symbol]                       0x08000bd0   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData10MHz)
-    [Anonymous Symbol]                       0x08000cb8   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz)
-    [Anonymous Symbol]                       0x08000d94   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz)
-    [Anonymous Symbol]                       0x08000e84   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_Configure)
-    [Anonymous Symbol]                       0x08000ef8   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ConfigureObjectReset)
-    [Anonymous Symbol]                       0x08000f0c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_DlcToDataBytes)
-    [Anonymous Symbol]                       0x08000f34   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEnable)
-    [Anonymous Symbol]                       0x08000f8c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountStateGet)
-    [Anonymous Symbol]                       0x0800100c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterMaskConfigure)
-    [Anonymous Symbol]                       0x0800105c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterObjectConfigure)
-    [Anonymous Symbol]                       0x080010ac   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterToFifoLink)
-    [Anonymous Symbol]                       0x080010dc   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioModeConfigure)
-    [Anonymous Symbol]                       0x08001148   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventEnable)
-    [Anonymous Symbol]                       0x080011dc   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeSelect)
-    [Anonymous Symbol]                       0x0800123c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_RamInit)
-    [Anonymous Symbol]                       0x0800129c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray)
-    [Anonymous Symbol]                       0x08001308   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigure)
-    [Anonymous Symbol]                       0x08001380   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset)
-    [Anonymous Symbol]                       0x08001390   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventEnable)
-    [Anonymous Symbol]                       0x0800140c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet)
-    [Anonymous Symbol]                       0x0800159c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_Reset)
-    [Anonymous Symbol]                       0x080015bc   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigure)
-    [Anonymous Symbol]                       0x0800162c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset)
-    [Anonymous Symbol]                       0x08001638   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventGet)
-    [Anonymous Symbol]                       0x08001684   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad)
-    [Anonymous Symbol]                       0x08001828   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArray)
-    [Anonymous Symbol]                       0x0800187c   Section        0  drv_spi.o(.text.DRV_SPI_Initialize)
-    [Anonymous Symbol]                       0x08001900   Section        0  drv_spi.o(.text.DRV_SPI_TransferData)
-    [Anonymous Symbol]                       0x08001964   Section        0  stm32f10x_gpio.o(.text.GPIO_Init)
-    [Anonymous Symbol]                       0x08001a24   Section        0  stm32f10x_gpio.o(.text.GPIO_PinRemapConfig)
-    [Anonymous Symbol]                       0x08001aa0   Section        0  stm32f10x_gpio.o(.text.GPIO_ReadInputDataBit)
-    [Anonymous Symbol]                       0x08001aac   Section        0  stm32f10x_gpio.o(.text.GPIO_ResetBits)
-    [Anonymous Symbol]                       0x08001ab0   Section        0  stm32f10x_gpio.o(.text.GPIO_SetBits)
-    [Anonymous Symbol]                       0x08001ab4   Section        0  stm32f10x_rcc.o(.text.RCC_APB2PeriphClockCmd)
-    [Anonymous Symbol]                       0x08001acc   Section        0  stm32f10x_spi.o(.text.SPI_Cmd)
-    [Anonymous Symbol]                       0x08001ae0   Section        0  stm32f10x_spi.o(.text.SPI_I2S_GetFlagStatus)
-    [Anonymous Symbol]                       0x08001aec   Section        0  stm32f10x_spi.o(.text.SPI_I2S_ReceiveData)
-    [Anonymous Symbol]                       0x08001af0   Section        0  stm32f10x_spi.o(.text.SPI_I2S_SendData)
-    [Anonymous Symbol]                       0x08001af4   Section        0  stm32f10x_spi.o(.text.SPI_Init)
-    [Anonymous Symbol]                       0x08001b3c   Section        0  system_stm32f10x.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x08001c8c   Section        0  main.o(.text.main)
-    i.__scatterload_copy                     0x08001c96   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08001ca4   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08001ca6   Section       14  handlers.o(i.__scatterload_zeroinit)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz 0x08001cb4   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.13 0x08001cfc   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.13)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14 0x08001d44   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.15 0x08001d8c   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.15)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz 0x08001dd4   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.10 0x08001e1c   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.10)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.11 0x08001e64   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.11)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.7 0x08001eac   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.7)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.8 0x08001ef4   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.8)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz 0x08001f3c   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16 0x08001f84   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz 0x08001fcc   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12 0x08002014   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz 0x0800205c   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz)
-    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6 0x080020a4   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6)
-    .Lswitch.table.DRV_CANFDSPI_DlcToDataBytes 0x080020ec   Data          28  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_DlcToDataBytes)
+    [Anonymous Symbol]                       0x08000828   Section        0  app.o(.text.APP_TestRamAccess)
+    [Anonymous Symbol]                       0x080008dc   Section        0  app.o(.text.APP_TestRegisterAccess)
+    [Anonymous Symbol]                       0x08000998   Section        0  app.o(.text.APP_TransmitMessageQueue)
+    [Anonymous Symbol]                       0x08000a34   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure)
+    [Anonymous Symbol]                       0x08000bf4   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData10MHz)
+    [Anonymous Symbol]                       0x08000cdc   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz)
+    [Anonymous Symbol]                       0x08000db8   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz)
+    [Anonymous Symbol]                       0x08000ea8   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_Configure)
+    [Anonymous Symbol]                       0x08000f1c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ConfigureObjectReset)
+    [Anonymous Symbol]                       0x08000f30   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_DlcToDataBytes)
+    [Anonymous Symbol]                       0x08000f58   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEnable)
+    [Anonymous Symbol]                       0x08000fb0   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountStateGet)
+    [Anonymous Symbol]                       0x08001030   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterMaskConfigure)
+    [Anonymous Symbol]                       0x08001080   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterObjectConfigure)
+    [Anonymous Symbol]                       0x080010d0   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterToFifoLink)
+    [Anonymous Symbol]                       0x08001100   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioModeConfigure)
+    [Anonymous Symbol]                       0x0800116c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventEnable)
+    [Anonymous Symbol]                       0x08001200   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeSelect)
+    [Anonymous Symbol]                       0x08001260   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_RamInit)
+    [Anonymous Symbol]                       0x080012c0   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray)
+    [Anonymous Symbol]                       0x0800132c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigure)
+    [Anonymous Symbol]                       0x080013a4   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset)
+    [Anonymous Symbol]                       0x080013b4   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventEnable)
+    [Anonymous Symbol]                       0x08001430   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet)
+    [Anonymous Symbol]                       0x080015c0   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_Reset)
+    [Anonymous Symbol]                       0x080015e0   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigure)
+    [Anonymous Symbol]                       0x08001650   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset)
+    [Anonymous Symbol]                       0x0800165c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventGet)
+    [Anonymous Symbol]                       0x080016a8   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad)
+    [Anonymous Symbol]                       0x0800184c   Section        0  drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArray)
+    [Anonymous Symbol]                       0x080018a0   Section        0  drv_spi.o(.text.DRV_SPI_Initialize)
+    [Anonymous Symbol]                       0x08001924   Section        0  drv_spi.o(.text.DRV_SPI_TransferData)
+    [Anonymous Symbol]                       0x08001988   Section        0  stm32f10x_gpio.o(.text.GPIO_Init)
+    [Anonymous Symbol]                       0x08001a48   Section        0  stm32f10x_gpio.o(.text.GPIO_PinRemapConfig)
+    [Anonymous Symbol]                       0x08001ac4   Section        0  stm32f10x_gpio.o(.text.GPIO_ReadInputDataBit)
+    [Anonymous Symbol]                       0x08001ad0   Section        0  stm32f10x_gpio.o(.text.GPIO_ResetBits)
+    [Anonymous Symbol]                       0x08001ad4   Section        0  stm32f10x_gpio.o(.text.GPIO_SetBits)
+    [Anonymous Symbol]                       0x08001ad8   Section        0  stm32f10x_rcc.o(.text.RCC_APB2PeriphClockCmd)
+    [Anonymous Symbol]                       0x08001af0   Section        0  stm32f10x_spi.o(.text.SPI_Cmd)
+    [Anonymous Symbol]                       0x08001b04   Section        0  stm32f10x_spi.o(.text.SPI_I2S_GetFlagStatus)
+    [Anonymous Symbol]                       0x08001b10   Section        0  stm32f10x_spi.o(.text.SPI_I2S_ReceiveData)
+    [Anonymous Symbol]                       0x08001b14   Section        0  stm32f10x_spi.o(.text.SPI_I2S_SendData)
+    [Anonymous Symbol]                       0x08001b18   Section        0  stm32f10x_spi.o(.text.SPI_Init)
+    [Anonymous Symbol]                       0x08001b60   Section        0  system_stm32f10x.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x08001cb0   Section        0  main.o(.text.main)
+    i.__scatterload_copy                     0x08001cba   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08001cc8   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08001cca   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz 0x08001cd8   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.13 0x08001d20   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.13)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14 0x08001d68   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.15 0x08001db0   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.15)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz 0x08001df8   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.10 0x08001e40   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.10)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.11 0x08001e88   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.11)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.7 0x08001ed0   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.7)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.8 0x08001f18   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.8)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz 0x08001f60   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16 0x08001fa8   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz 0x08001ff0   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12 0x08002038   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz 0x08002080   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz)
+    .Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6 0x080020c8   Data          72  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6)
+    .Lswitch.table.DRV_CANFDSPI_DlcToDataBytes 0x08002110   Data          28  drv_canfdspi_api.o(.rodata..Lswitch.table.DRV_CANFDSPI_DlcToDataBytes)
     _rand_state                              0x20000000   Data           4  rand.o(.data)
     .data                                    0x20000000   Section        4  rand.o(.data)
     STACK                                    0x20000190   Section     2048  startup_stm32f10x_cl.o(STACK)
@@ -1506,57 +1504,57 @@ Image Symbol Table
     APP_Initialize                           0x08000309   Thumb Code   164  app.o(.text.APP_Initialize)
     APP_PayLoad_Tasks                        0x080003ad   Thumb Code   206  app.o(.text.APP_PayLoad_Tasks)
     APP_ReceiveMessage_Tasks                 0x0800047d   Thumb Code   406  app.o(.text.APP_ReceiveMessage_Tasks)
-    APP_Tasks                                0x08000615   Thumb Code   494  app.o(.text.APP_Tasks)
-    APP_TestRamAccess                        0x08000805   Thumb Code   178  app.o(.text.APP_TestRamAccess)
-    APP_TestRegisterAccess                   0x080008b9   Thumb Code   186  app.o(.text.APP_TestRegisterAccess)
-    APP_TransmitMessageQueue                 0x08000975   Thumb Code   154  app.o(.text.APP_TransmitMessageQueue)
-    DRV_CANFDSPI_BitTimeConfigure            0x08000a11   Thumb Code   446  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure)
-    DRV_CANFDSPI_BitTimeConfigureData10MHz   0x08000bd1   Thumb Code   232  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData10MHz)
-    DRV_CANFDSPI_BitTimeConfigureData20MHz   0x08000cb9   Thumb Code   220  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz)
-    DRV_CANFDSPI_BitTimeConfigureData40MHz   0x08000d95   Thumb Code   240  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz)
-    DRV_CANFDSPI_Configure                   0x08000e85   Thumb Code   114  drv_canfdspi_api.o(.text.DRV_CANFDSPI_Configure)
-    DRV_CANFDSPI_ConfigureObjectReset        0x08000ef9   Thumb Code    20  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ConfigureObjectReset)
-    DRV_CANFDSPI_DlcToDataBytes              0x08000f0d   Thumb Code    38  drv_canfdspi_api.o(.text.DRV_CANFDSPI_DlcToDataBytes)
-    DRV_CANFDSPI_EccEnable                   0x08000f35   Thumb Code    88  drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEnable)
-    DRV_CANFDSPI_ErrorCountStateGet          0x08000f8d   Thumb Code   128  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountStateGet)
-    DRV_CANFDSPI_FilterMaskConfigure         0x0800100d   Thumb Code    80  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterMaskConfigure)
-    DRV_CANFDSPI_FilterObjectConfigure       0x0800105d   Thumb Code    80  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterObjectConfigure)
-    DRV_CANFDSPI_FilterToFifoLink            0x080010ad   Thumb Code    48  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterToFifoLink)
-    DRV_CANFDSPI_GpioModeConfigure           0x080010dd   Thumb Code   108  drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioModeConfigure)
-    DRV_CANFDSPI_ModuleEventEnable           0x08001149   Thumb Code   148  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventEnable)
-    DRV_CANFDSPI_OperationModeSelect         0x080011dd   Thumb Code    94  drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeSelect)
-    DRV_CANFDSPI_RamInit                     0x0800123d   Thumb Code    96  drv_canfdspi_api.o(.text.DRV_CANFDSPI_RamInit)
-    DRV_CANFDSPI_ReadByteArray               0x0800129d   Thumb Code   108  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray)
-    DRV_CANFDSPI_ReceiveChannelConfigure     0x08001309   Thumb Code   120  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigure)
-    DRV_CANFDSPI_ReceiveChannelConfigureObjectReset 0x08001381   Thumb Code    14  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset)
-    DRV_CANFDSPI_ReceiveChannelEventEnable   0x08001391   Thumb Code   124  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventEnable)
-    DRV_CANFDSPI_ReceiveMessageGet           0x0800140d   Thumb Code   398  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet)
-    DRV_CANFDSPI_Reset                       0x0800159d   Thumb Code    30  drv_canfdspi_api.o(.text.DRV_CANFDSPI_Reset)
-    DRV_CANFDSPI_TransmitChannelConfigure    0x080015bd   Thumb Code   112  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigure)
-    DRV_CANFDSPI_TransmitChannelConfigureObjectReset 0x0800162d   Thumb Code    10  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset)
-    DRV_CANFDSPI_TransmitChannelEventGet     0x08001639   Thumb Code    74  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventGet)
-    DRV_CANFDSPI_TransmitChannelLoad         0x08001685   Thumb Code   418  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad)
-    DRV_CANFDSPI_WriteByteArray              0x08001829   Thumb Code    84  drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArray)
-    DRV_SPI_Initialize                       0x0800187d   Thumb Code   130  drv_spi.o(.text.DRV_SPI_Initialize)
-    DRV_SPI_TransferData                     0x08001901   Thumb Code   100  drv_spi.o(.text.DRV_SPI_TransferData)
-    GPIO_Init                                0x08001965   Thumb Code   192  stm32f10x_gpio.o(.text.GPIO_Init)
-    GPIO_PinRemapConfig                      0x08001a25   Thumb Code   122  stm32f10x_gpio.o(.text.GPIO_PinRemapConfig)
-    GPIO_ReadInputDataBit                    0x08001aa1   Thumb Code    10  stm32f10x_gpio.o(.text.GPIO_ReadInputDataBit)
-    GPIO_ResetBits                           0x08001aad   Thumb Code     4  stm32f10x_gpio.o(.text.GPIO_ResetBits)
-    GPIO_SetBits                             0x08001ab1   Thumb Code     4  stm32f10x_gpio.o(.text.GPIO_SetBits)
-    RCC_APB2PeriphClockCmd                   0x08001ab5   Thumb Code    24  stm32f10x_rcc.o(.text.RCC_APB2PeriphClockCmd)
-    SPI_Cmd                                  0x08001acd   Thumb Code    20  stm32f10x_spi.o(.text.SPI_Cmd)
-    SPI_I2S_GetFlagStatus                    0x08001ae1   Thumb Code    10  stm32f10x_spi.o(.text.SPI_I2S_GetFlagStatus)
-    SPI_I2S_ReceiveData                      0x08001aed   Thumb Code     4  stm32f10x_spi.o(.text.SPI_I2S_ReceiveData)
-    SPI_I2S_SendData                         0x08001af1   Thumb Code     4  stm32f10x_spi.o(.text.SPI_I2S_SendData)
-    SPI_Init                                 0x08001af5   Thumb Code    70  stm32f10x_spi.o(.text.SPI_Init)
-    SystemInit                               0x08001b3d   Thumb Code   336  system_stm32f10x.o(.text.SystemInit)
-    main                                     0x08001c8d   Thumb Code    10  main.o(.text.main)
-    __scatterload_copy                       0x08001c97   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08001ca5   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08001ca7   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    Region$$Table$$Base                      0x08002108   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08002128   Number         0  anon$$obj.o(Region$$Table)
+    APP_Tasks                                0x08000615   Thumb Code   530  app.o(.text.APP_Tasks)
+    APP_TestRamAccess                        0x08000829   Thumb Code   178  app.o(.text.APP_TestRamAccess)
+    APP_TestRegisterAccess                   0x080008dd   Thumb Code   186  app.o(.text.APP_TestRegisterAccess)
+    APP_TransmitMessageQueue                 0x08000999   Thumb Code   154  app.o(.text.APP_TransmitMessageQueue)
+    DRV_CANFDSPI_BitTimeConfigure            0x08000a35   Thumb Code   446  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigure)
+    DRV_CANFDSPI_BitTimeConfigureData10MHz   0x08000bf5   Thumb Code   232  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData10MHz)
+    DRV_CANFDSPI_BitTimeConfigureData20MHz   0x08000cdd   Thumb Code   220  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData20MHz)
+    DRV_CANFDSPI_BitTimeConfigureData40MHz   0x08000db9   Thumb Code   240  drv_canfdspi_api.o(.text.DRV_CANFDSPI_BitTimeConfigureData40MHz)
+    DRV_CANFDSPI_Configure                   0x08000ea9   Thumb Code   114  drv_canfdspi_api.o(.text.DRV_CANFDSPI_Configure)
+    DRV_CANFDSPI_ConfigureObjectReset        0x08000f1d   Thumb Code    20  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ConfigureObjectReset)
+    DRV_CANFDSPI_DlcToDataBytes              0x08000f31   Thumb Code    38  drv_canfdspi_api.o(.text.DRV_CANFDSPI_DlcToDataBytes)
+    DRV_CANFDSPI_EccEnable                   0x08000f59   Thumb Code    88  drv_canfdspi_api.o(.text.DRV_CANFDSPI_EccEnable)
+    DRV_CANFDSPI_ErrorCountStateGet          0x08000fb1   Thumb Code   128  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ErrorCountStateGet)
+    DRV_CANFDSPI_FilterMaskConfigure         0x08001031   Thumb Code    80  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterMaskConfigure)
+    DRV_CANFDSPI_FilterObjectConfigure       0x08001081   Thumb Code    80  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterObjectConfigure)
+    DRV_CANFDSPI_FilterToFifoLink            0x080010d1   Thumb Code    48  drv_canfdspi_api.o(.text.DRV_CANFDSPI_FilterToFifoLink)
+    DRV_CANFDSPI_GpioModeConfigure           0x08001101   Thumb Code   108  drv_canfdspi_api.o(.text.DRV_CANFDSPI_GpioModeConfigure)
+    DRV_CANFDSPI_ModuleEventEnable           0x0800116d   Thumb Code   148  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ModuleEventEnable)
+    DRV_CANFDSPI_OperationModeSelect         0x08001201   Thumb Code    94  drv_canfdspi_api.o(.text.DRV_CANFDSPI_OperationModeSelect)
+    DRV_CANFDSPI_RamInit                     0x08001261   Thumb Code    96  drv_canfdspi_api.o(.text.DRV_CANFDSPI_RamInit)
+    DRV_CANFDSPI_ReadByteArray               0x080012c1   Thumb Code   108  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReadByteArray)
+    DRV_CANFDSPI_ReceiveChannelConfigure     0x0800132d   Thumb Code   120  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigure)
+    DRV_CANFDSPI_ReceiveChannelConfigureObjectReset 0x080013a5   Thumb Code    14  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset)
+    DRV_CANFDSPI_ReceiveChannelEventEnable   0x080013b5   Thumb Code   124  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveChannelEventEnable)
+    DRV_CANFDSPI_ReceiveMessageGet           0x08001431   Thumb Code   398  drv_canfdspi_api.o(.text.DRV_CANFDSPI_ReceiveMessageGet)
+    DRV_CANFDSPI_Reset                       0x080015c1   Thumb Code    30  drv_canfdspi_api.o(.text.DRV_CANFDSPI_Reset)
+    DRV_CANFDSPI_TransmitChannelConfigure    0x080015e1   Thumb Code   112  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigure)
+    DRV_CANFDSPI_TransmitChannelConfigureObjectReset 0x08001651   Thumb Code    10  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset)
+    DRV_CANFDSPI_TransmitChannelEventGet     0x0800165d   Thumb Code    74  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelEventGet)
+    DRV_CANFDSPI_TransmitChannelLoad         0x080016a9   Thumb Code   418  drv_canfdspi_api.o(.text.DRV_CANFDSPI_TransmitChannelLoad)
+    DRV_CANFDSPI_WriteByteArray              0x0800184d   Thumb Code    84  drv_canfdspi_api.o(.text.DRV_CANFDSPI_WriteByteArray)
+    DRV_SPI_Initialize                       0x080018a1   Thumb Code   130  drv_spi.o(.text.DRV_SPI_Initialize)
+    DRV_SPI_TransferData                     0x08001925   Thumb Code   100  drv_spi.o(.text.DRV_SPI_TransferData)
+    GPIO_Init                                0x08001989   Thumb Code   192  stm32f10x_gpio.o(.text.GPIO_Init)
+    GPIO_PinRemapConfig                      0x08001a49   Thumb Code   122  stm32f10x_gpio.o(.text.GPIO_PinRemapConfig)
+    GPIO_ReadInputDataBit                    0x08001ac5   Thumb Code    10  stm32f10x_gpio.o(.text.GPIO_ReadInputDataBit)
+    GPIO_ResetBits                           0x08001ad1   Thumb Code     4  stm32f10x_gpio.o(.text.GPIO_ResetBits)
+    GPIO_SetBits                             0x08001ad5   Thumb Code     4  stm32f10x_gpio.o(.text.GPIO_SetBits)
+    RCC_APB2PeriphClockCmd                   0x08001ad9   Thumb Code    24  stm32f10x_rcc.o(.text.RCC_APB2PeriphClockCmd)
+    SPI_Cmd                                  0x08001af1   Thumb Code    20  stm32f10x_spi.o(.text.SPI_Cmd)
+    SPI_I2S_GetFlagStatus                    0x08001b05   Thumb Code    10  stm32f10x_spi.o(.text.SPI_I2S_GetFlagStatus)
+    SPI_I2S_ReceiveData                      0x08001b11   Thumb Code     4  stm32f10x_spi.o(.text.SPI_I2S_ReceiveData)
+    SPI_I2S_SendData                         0x08001b15   Thumb Code     4  stm32f10x_spi.o(.text.SPI_I2S_SendData)
+    SPI_Init                                 0x08001b19   Thumb Code    70  stm32f10x_spi.o(.text.SPI_Init)
+    SystemInit                               0x08001b61   Thumb Code   336  system_stm32f10x.o(.text.SystemInit)
+    main                                     0x08001cb1   Thumb Code    10  main.o(.text.main)
+    __scatterload_copy                       0x08001cbb   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08001cc9   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08001ccb   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x0800212c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800214c   Number         0  anon$$obj.o(Region$$Table)
     delayCount                               0x20000004   Data           4  app.o(.data.delayCount)
     appData                                  0x20000008   Data           1  app.o(.bss.appData)
     config                                   0x2000000c   Data           4  app.o(.bss.config)
@@ -1589,152 +1587,152 @@ Memory Map of the image
 
   Image Entry point : 0x08000151
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002130, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002158, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002128, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000214c, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000150   Data   RO           17    RESET               startup_stm32f10x_cl.o
-    0x08000150   0x08000150   0x00000000   Code   RO          626  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000150   0x08000150   0x00000004   Code   RO          638    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08000154   0x08000154   0x00000004   Code   RO          641    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000158   0x08000158   0x00000000   Code   RO          643    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000158   0x08000158   0x00000000   Code   RO          645    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000158   0x08000158   0x00000008   Code   RO          646    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000160   0x08000160   0x00000000   Code   RO          648    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000160   0x08000160   0x00000000   Code   RO          650    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000160   0x08000160   0x00000004   Code   RO          639    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000150   0x08000150   0x00000000   Code   RO          627  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000150   0x08000150   0x00000004   Code   RO          639    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000154   0x08000154   0x00000004   Code   RO          642    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000158   0x08000158   0x00000000   Code   RO          644    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000158   0x08000158   0x00000000   Code   RO          646    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000158   0x08000158   0x00000008   Code   RO          647    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000160   0x08000160   0x00000000   Code   RO          649    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000160   0x08000160   0x00000000   Code   RO          651    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000160   0x08000160   0x00000004   Code   RO          640    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x08000164   0x08000164   0x00000024   Code   RO           18    .text               startup_stm32f10x_cl.o
-    0x08000188   0x08000188   0x00000024   Code   RO          629    .text               mc_w.l(rand.o)
-    0x080001ac   0x080001ac   0x00000024   Code   RO          632    .text               mc_w.l(memcpya.o)
-    0x080001d0   0x080001d0   0x00000024   Code   RO          634    .text               mc_w.l(memseta.o)
-    0x080001f4   0x080001f4   0x00000024   Code   RO          652    .text               mc_w.l(init.o)
-    0x08000218   0x08000218   0x000000f0   Code   RO           44    .text.APP_CANFDSPI_Init  app.o
-    0x08000308   0x08000308   0x000000a4   Code   RO           40    .text.APP_Initialize  app.o
-    0x080003ac   0x080003ac   0x000000ce   Code   RO           48    .text.APP_PayLoad_Tasks  app.o
+    0x08000188   0x08000188   0x00000024   Code   RO          630    .text               mc_w.l(rand.o)
+    0x080001ac   0x080001ac   0x00000024   Code   RO          633    .text               mc_w.l(memcpya.o)
+    0x080001d0   0x080001d0   0x00000024   Code   RO          635    .text               mc_w.l(memseta.o)
+    0x080001f4   0x080001f4   0x00000024   Code   RO          653    .text               mc_w.l(init.o)
+    0x08000218   0x08000218   0x000000f0   Code   RO           45    .text.APP_CANFDSPI_Init  app.o
+    0x08000308   0x08000308   0x000000a4   Code   RO           41    .text.APP_Initialize  app.o
+    0x080003ac   0x080003ac   0x000000ce   Code   RO           49    .text.APP_PayLoad_Tasks  app.o
     0x0800047a   0x0800047a   0x00000002   PAD
-    0x0800047c   0x0800047c   0x00000196   Code   RO           46    .text.APP_ReceiveMessage_Tasks  app.o
+    0x0800047c   0x0800047c   0x00000196   Code   RO           47    .text.APP_ReceiveMessage_Tasks  app.o
     0x08000612   0x08000612   0x00000002   PAD
-    0x08000614   0x08000614   0x000001ee   Code   RO           42    .text.APP_Tasks     app.o
-    0x08000802   0x08000802   0x00000002   PAD
-    0x08000804   0x08000804   0x000000b2   Code   RO           52    .text.APP_TestRamAccess  app.o
-    0x080008b6   0x080008b6   0x00000002   PAD
-    0x080008b8   0x080008b8   0x000000ba   Code   RO           54    .text.APP_TestRegisterAccess  app.o
-    0x08000972   0x08000972   0x00000002   PAD
-    0x08000974   0x08000974   0x0000009a   Code   RO           56    .text.APP_TransmitMessageQueue  app.o
-    0x08000a0e   0x08000a0e   0x00000002   PAD
-    0x08000a10   0x08000a10   0x000001be   Code   RO          314    .text.DRV_CANFDSPI_BitTimeConfigure  drv_canfdspi_api.o
-    0x08000bce   0x08000bce   0x00000002   PAD
-    0x08000bd0   0x08000bd0   0x000000e8   Code   RO          326    .text.DRV_CANFDSPI_BitTimeConfigureData10MHz  drv_canfdspi_api.o
-    0x08000cb8   0x08000cb8   0x000000dc   Code   RO          322    .text.DRV_CANFDSPI_BitTimeConfigureData20MHz  drv_canfdspi_api.o
-    0x08000d94   0x08000d94   0x000000f0   Code   RO          318    .text.DRV_CANFDSPI_BitTimeConfigureData40MHz  drv_canfdspi_api.o
-    0x08000e84   0x08000e84   0x00000072   Code   RO          122    .text.DRV_CANFDSPI_Configure  drv_canfdspi_api.o
-    0x08000ef6   0x08000ef6   0x00000002   PAD
-    0x08000ef8   0x08000ef8   0x00000014   Code   RO          124    .text.DRV_CANFDSPI_ConfigureObjectReset  drv_canfdspi_api.o
-    0x08000f0c   0x08000f0c   0x00000026   Code   RO          144    .text.DRV_CANFDSPI_DlcToDataBytes  drv_canfdspi_api.o
-    0x08000f32   0x08000f32   0x00000002   PAD
-    0x08000f34   0x08000f34   0x00000058   Code   RO          264    .text.DRV_CANFDSPI_EccEnable  drv_canfdspi_api.o
-    0x08000f8c   0x08000f8c   0x00000080   Code   RO          258    .text.DRV_CANFDSPI_ErrorCountStateGet  drv_canfdspi_api.o
-    0x0800100c   0x0800100c   0x00000050   Code   RO          168    .text.DRV_CANFDSPI_FilterMaskConfigure  drv_canfdspi_api.o
-    0x0800105c   0x0800105c   0x00000050   Code   RO          166    .text.DRV_CANFDSPI_FilterObjectConfigure  drv_canfdspi_api.o
-    0x080010ac   0x080010ac   0x00000030   Code   RO          170    .text.DRV_CANFDSPI_FilterToFifoLink  drv_canfdspi_api.o
-    0x080010dc   0x080010dc   0x0000006c   Code   RO          328    .text.DRV_CANFDSPI_GpioModeConfigure  drv_canfdspi_api.o
-    0x08001148   0x08001148   0x00000094   Code   RO          202    .text.DRV_CANFDSPI_ModuleEventEnable  drv_canfdspi_api.o
-    0x080011dc   0x080011dc   0x0000005e   Code   RO          126    .text.DRV_CANFDSPI_OperationModeSelect  drv_canfdspi_api.o
-    0x0800123a   0x0800123a   0x00000002   PAD
-    0x0800123c   0x0800123c   0x00000060   Code   RO          292    .text.DRV_CANFDSPI_RamInit  drv_canfdspi_api.o
-    0x0800129c   0x0800129c   0x0000006c   Code   RO          110    .text.DRV_CANFDSPI_ReadByteArray  drv_canfdspi_api.o
-    0x08001308   0x08001308   0x00000078   Code   RO          178    .text.DRV_CANFDSPI_ReceiveChannelConfigure  drv_canfdspi_api.o
-    0x08001380   0x08001380   0x0000000e   Code   RO          180    .text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset  drv_canfdspi_api.o
-    0x0800138e   0x0800138e   0x00000002   PAD
-    0x08001390   0x08001390   0x0000007c   Code   RO          238    .text.DRV_CANFDSPI_ReceiveChannelEventEnable  drv_canfdspi_api.o
-    0x0800140c   0x0800140c   0x0000018e   Code   RO          184    .text.DRV_CANFDSPI_ReceiveMessageGet  drv_canfdspi_api.o
-    0x0800159a   0x0800159a   0x00000002   PAD
-    0x0800159c   0x0800159c   0x0000001e   Code   RO           90    .text.DRV_CANFDSPI_Reset  drv_canfdspi_api.o
-    0x080015ba   0x080015ba   0x00000002   PAD
-    0x080015bc   0x080015bc   0x00000070   Code   RO          134    .text.DRV_CANFDSPI_TransmitChannelConfigure  drv_canfdspi_api.o
-    0x0800162c   0x0800162c   0x0000000a   Code   RO          136    .text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset  drv_canfdspi_api.o
-    0x08001636   0x08001636   0x00000002   PAD
-    0x08001638   0x08001638   0x0000004a   Code   RO          216    .text.DRV_CANFDSPI_TransmitChannelEventGet  drv_canfdspi_api.o
-    0x08001682   0x08001682   0x00000002   PAD
-    0x08001684   0x08001684   0x000001a2   Code   RO          142    .text.DRV_CANFDSPI_TransmitChannelLoad  drv_canfdspi_api.o
-    0x08001826   0x08001826   0x00000002   PAD
-    0x08001828   0x08001828   0x00000054   Code   RO          114    .text.DRV_CANFDSPI_WriteByteArray  drv_canfdspi_api.o
-    0x0800187c   0x0800187c   0x00000082   Code   RO          378    .text.DRV_SPI_Initialize  drv_spi.o
-    0x080018fe   0x080018fe   0x00000002   PAD
-    0x08001900   0x08001900   0x00000064   Code   RO          382    .text.DRV_SPI_TransferData  drv_spi.o
-    0x08001964   0x08001964   0x000000c0   Code   RO          416    .text.GPIO_Init     stm32f10x_gpio.o
-    0x08001a24   0x08001a24   0x0000007a   Code   RO          442    .text.GPIO_PinRemapConfig  stm32f10x_gpio.o
-    0x08001a9e   0x08001a9e   0x00000002   PAD
-    0x08001aa0   0x08001aa0   0x0000000a   Code   RO          420    .text.GPIO_ReadInputDataBit  stm32f10x_gpio.o
-    0x08001aaa   0x08001aaa   0x00000002   PAD
-    0x08001aac   0x08001aac   0x00000004   Code   RO          430    .text.GPIO_ResetBits  stm32f10x_gpio.o
-    0x08001ab0   0x08001ab0   0x00000004   Code   RO          428    .text.GPIO_SetBits  stm32f10x_gpio.o
-    0x08001ab4   0x08001ab4   0x00000018   Code   RO          517    .text.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o
-    0x08001acc   0x08001acc   0x00000014   Code   RO          559    .text.SPI_Cmd       stm32f10x_spi.o
-    0x08001ae0   0x08001ae0   0x0000000a   Code   RO          587    .text.SPI_I2S_GetFlagStatus  stm32f10x_spi.o
-    0x08001aea   0x08001aea   0x00000002   PAD
-    0x08001aec   0x08001aec   0x00000004   Code   RO          569    .text.SPI_I2S_ReceiveData  stm32f10x_spi.o
-    0x08001af0   0x08001af0   0x00000004   Code   RO          567    .text.SPI_I2S_SendData  stm32f10x_spi.o
-    0x08001af4   0x08001af4   0x00000046   Code   RO          551    .text.SPI_Init      stm32f10x_spi.o
-    0x08001b3a   0x08001b3a   0x00000002   PAD
-    0x08001b3c   0x08001b3c   0x00000150   Code   RO            2    .text.SystemInit    system_stm32f10x.o
-    0x08001c8c   0x08001c8c   0x0000000a   Code   RO           25    .text.main          main.o
-    0x08001c96   0x08001c96   0x0000000e   Code   RO          656    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08001ca4   0x08001ca4   0x00000002   Code   RO          657    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08001ca6   0x08001ca6   0x0000000e   Code   RO          658    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08001cb4   0x08001cb4   0x00000048   Data   RO          364    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz  drv_canfdspi_api.o
-    0x08001cfc   0x08001cfc   0x00000048   Data   RO          365    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.13  drv_canfdspi_api.o
-    0x08001d44   0x08001d44   0x00000048   Data   RO          366    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14  drv_canfdspi_api.o
-    0x08001d8c   0x08001d8c   0x00000048   Data   RO          367    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.15  drv_canfdspi_api.o
-    0x08001dd4   0x08001dd4   0x00000048   Data   RO          357    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz  drv_canfdspi_api.o
-    0x08001e1c   0x08001e1c   0x00000048   Data   RO          360    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.10  drv_canfdspi_api.o
-    0x08001e64   0x08001e64   0x00000048   Data   RO          361    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.11  drv_canfdspi_api.o
-    0x08001eac   0x08001eac   0x00000048   Data   RO          358    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.7  drv_canfdspi_api.o
-    0x08001ef4   0x08001ef4   0x00000048   Data   RO          359    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.8  drv_canfdspi_api.o
-    0x08001f3c   0x08001f3c   0x00000048   Data   RO          368    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz  drv_canfdspi_api.o
-    0x08001f84   0x08001f84   0x00000048   Data   RO          369    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16  drv_canfdspi_api.o
-    0x08001fcc   0x08001fcc   0x00000048   Data   RO          362    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz  drv_canfdspi_api.o
-    0x08002014   0x08002014   0x00000048   Data   RO          363    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12  drv_canfdspi_api.o
-    0x0800205c   0x0800205c   0x00000048   Data   RO          355    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz  drv_canfdspi_api.o
-    0x080020a4   0x080020a4   0x00000048   Data   RO          356    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6  drv_canfdspi_api.o
-    0x080020ec   0x080020ec   0x0000001c   Data   RO          354    .rodata..Lswitch.table.DRV_CANFDSPI_DlcToDataBytes  drv_canfdspi_api.o
-    0x08002108   0x08002108   0x00000020   Data   RO          655    Region$$Table       anon$$obj.o
+    0x08000614   0x08000614   0x00000212   Code   RO           43    .text.APP_Tasks     app.o
+    0x08000826   0x08000826   0x00000002   PAD
+    0x08000828   0x08000828   0x000000b2   Code   RO           53    .text.APP_TestRamAccess  app.o
+    0x080008da   0x080008da   0x00000002   PAD
+    0x080008dc   0x080008dc   0x000000ba   Code   RO           55    .text.APP_TestRegisterAccess  app.o
+    0x08000996   0x08000996   0x00000002   PAD
+    0x08000998   0x08000998   0x0000009a   Code   RO           57    .text.APP_TransmitMessageQueue  app.o
+    0x08000a32   0x08000a32   0x00000002   PAD
+    0x08000a34   0x08000a34   0x000001be   Code   RO          315    .text.DRV_CANFDSPI_BitTimeConfigure  drv_canfdspi_api.o
+    0x08000bf2   0x08000bf2   0x00000002   PAD
+    0x08000bf4   0x08000bf4   0x000000e8   Code   RO          327    .text.DRV_CANFDSPI_BitTimeConfigureData10MHz  drv_canfdspi_api.o
+    0x08000cdc   0x08000cdc   0x000000dc   Code   RO          323    .text.DRV_CANFDSPI_BitTimeConfigureData20MHz  drv_canfdspi_api.o
+    0x08000db8   0x08000db8   0x000000f0   Code   RO          319    .text.DRV_CANFDSPI_BitTimeConfigureData40MHz  drv_canfdspi_api.o
+    0x08000ea8   0x08000ea8   0x00000072   Code   RO          123    .text.DRV_CANFDSPI_Configure  drv_canfdspi_api.o
+    0x08000f1a   0x08000f1a   0x00000002   PAD
+    0x08000f1c   0x08000f1c   0x00000014   Code   RO          125    .text.DRV_CANFDSPI_ConfigureObjectReset  drv_canfdspi_api.o
+    0x08000f30   0x08000f30   0x00000026   Code   RO          145    .text.DRV_CANFDSPI_DlcToDataBytes  drv_canfdspi_api.o
+    0x08000f56   0x08000f56   0x00000002   PAD
+    0x08000f58   0x08000f58   0x00000058   Code   RO          265    .text.DRV_CANFDSPI_EccEnable  drv_canfdspi_api.o
+    0x08000fb0   0x08000fb0   0x00000080   Code   RO          259    .text.DRV_CANFDSPI_ErrorCountStateGet  drv_canfdspi_api.o
+    0x08001030   0x08001030   0x00000050   Code   RO          169    .text.DRV_CANFDSPI_FilterMaskConfigure  drv_canfdspi_api.o
+    0x08001080   0x08001080   0x00000050   Code   RO          167    .text.DRV_CANFDSPI_FilterObjectConfigure  drv_canfdspi_api.o
+    0x080010d0   0x080010d0   0x00000030   Code   RO          171    .text.DRV_CANFDSPI_FilterToFifoLink  drv_canfdspi_api.o
+    0x08001100   0x08001100   0x0000006c   Code   RO          329    .text.DRV_CANFDSPI_GpioModeConfigure  drv_canfdspi_api.o
+    0x0800116c   0x0800116c   0x00000094   Code   RO          203    .text.DRV_CANFDSPI_ModuleEventEnable  drv_canfdspi_api.o
+    0x08001200   0x08001200   0x0000005e   Code   RO          127    .text.DRV_CANFDSPI_OperationModeSelect  drv_canfdspi_api.o
+    0x0800125e   0x0800125e   0x00000002   PAD
+    0x08001260   0x08001260   0x00000060   Code   RO          293    .text.DRV_CANFDSPI_RamInit  drv_canfdspi_api.o
+    0x080012c0   0x080012c0   0x0000006c   Code   RO          111    .text.DRV_CANFDSPI_ReadByteArray  drv_canfdspi_api.o
+    0x0800132c   0x0800132c   0x00000078   Code   RO          179    .text.DRV_CANFDSPI_ReceiveChannelConfigure  drv_canfdspi_api.o
+    0x080013a4   0x080013a4   0x0000000e   Code   RO          181    .text.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset  drv_canfdspi_api.o
+    0x080013b2   0x080013b2   0x00000002   PAD
+    0x080013b4   0x080013b4   0x0000007c   Code   RO          239    .text.DRV_CANFDSPI_ReceiveChannelEventEnable  drv_canfdspi_api.o
+    0x08001430   0x08001430   0x0000018e   Code   RO          185    .text.DRV_CANFDSPI_ReceiveMessageGet  drv_canfdspi_api.o
+    0x080015be   0x080015be   0x00000002   PAD
+    0x080015c0   0x080015c0   0x0000001e   Code   RO           91    .text.DRV_CANFDSPI_Reset  drv_canfdspi_api.o
+    0x080015de   0x080015de   0x00000002   PAD
+    0x080015e0   0x080015e0   0x00000070   Code   RO          135    .text.DRV_CANFDSPI_TransmitChannelConfigure  drv_canfdspi_api.o
+    0x08001650   0x08001650   0x0000000a   Code   RO          137    .text.DRV_CANFDSPI_TransmitChannelConfigureObjectReset  drv_canfdspi_api.o
+    0x0800165a   0x0800165a   0x00000002   PAD
+    0x0800165c   0x0800165c   0x0000004a   Code   RO          217    .text.DRV_CANFDSPI_TransmitChannelEventGet  drv_canfdspi_api.o
+    0x080016a6   0x080016a6   0x00000002   PAD
+    0x080016a8   0x080016a8   0x000001a2   Code   RO          143    .text.DRV_CANFDSPI_TransmitChannelLoad  drv_canfdspi_api.o
+    0x0800184a   0x0800184a   0x00000002   PAD
+    0x0800184c   0x0800184c   0x00000054   Code   RO          115    .text.DRV_CANFDSPI_WriteByteArray  drv_canfdspi_api.o
+    0x080018a0   0x080018a0   0x00000082   Code   RO          379    .text.DRV_SPI_Initialize  drv_spi.o
+    0x08001922   0x08001922   0x00000002   PAD
+    0x08001924   0x08001924   0x00000064   Code   RO          383    .text.DRV_SPI_TransferData  drv_spi.o
+    0x08001988   0x08001988   0x000000c0   Code   RO          417    .text.GPIO_Init     stm32f10x_gpio.o
+    0x08001a48   0x08001a48   0x0000007a   Code   RO          443    .text.GPIO_PinRemapConfig  stm32f10x_gpio.o
+    0x08001ac2   0x08001ac2   0x00000002   PAD
+    0x08001ac4   0x08001ac4   0x0000000a   Code   RO          421    .text.GPIO_ReadInputDataBit  stm32f10x_gpio.o
+    0x08001ace   0x08001ace   0x00000002   PAD
+    0x08001ad0   0x08001ad0   0x00000004   Code   RO          431    .text.GPIO_ResetBits  stm32f10x_gpio.o
+    0x08001ad4   0x08001ad4   0x00000004   Code   RO          429    .text.GPIO_SetBits  stm32f10x_gpio.o
+    0x08001ad8   0x08001ad8   0x00000018   Code   RO          518    .text.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o
+    0x08001af0   0x08001af0   0x00000014   Code   RO          560    .text.SPI_Cmd       stm32f10x_spi.o
+    0x08001b04   0x08001b04   0x0000000a   Code   RO          588    .text.SPI_I2S_GetFlagStatus  stm32f10x_spi.o
+    0x08001b0e   0x08001b0e   0x00000002   PAD
+    0x08001b10   0x08001b10   0x00000004   Code   RO          570    .text.SPI_I2S_ReceiveData  stm32f10x_spi.o
+    0x08001b14   0x08001b14   0x00000004   Code   RO          568    .text.SPI_I2S_SendData  stm32f10x_spi.o
+    0x08001b18   0x08001b18   0x00000046   Code   RO          552    .text.SPI_Init      stm32f10x_spi.o
+    0x08001b5e   0x08001b5e   0x00000002   PAD
+    0x08001b60   0x08001b60   0x00000150   Code   RO            2    .text.SystemInit    system_stm32f10x.o
+    0x08001cb0   0x08001cb0   0x0000000a   Code   RO           25    .text.main          main.o
+    0x08001cba   0x08001cba   0x0000000e   Code   RO          657    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08001cc8   0x08001cc8   0x00000002   Code   RO          658    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08001cca   0x08001cca   0x0000000e   Code   RO          659    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08001cd8   0x08001cd8   0x00000048   Data   RO          365    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz  drv_canfdspi_api.o
+    0x08001d20   0x08001d20   0x00000048   Data   RO          366    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.13  drv_canfdspi_api.o
+    0x08001d68   0x08001d68   0x00000048   Data   RO          367    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.14  drv_canfdspi_api.o
+    0x08001db0   0x08001db0   0x00000048   Data   RO          368    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData20MHz.15  drv_canfdspi_api.o
+    0x08001df8   0x08001df8   0x00000048   Data   RO          358    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz  drv_canfdspi_api.o
+    0x08001e40   0x08001e40   0x00000048   Data   RO          361    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.10  drv_canfdspi_api.o
+    0x08001e88   0x08001e88   0x00000048   Data   RO          362    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.11  drv_canfdspi_api.o
+    0x08001ed0   0x08001ed0   0x00000048   Data   RO          359    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.7  drv_canfdspi_api.o
+    0x08001f18   0x08001f18   0x00000048   Data   RO          360    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureData40MHz.8  drv_canfdspi_api.o
+    0x08001f60   0x08001f60   0x00000048   Data   RO          369    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz  drv_canfdspi_api.o
+    0x08001fa8   0x08001fa8   0x00000048   Data   RO          370    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal10MHz.16  drv_canfdspi_api.o
+    0x08001ff0   0x08001ff0   0x00000048   Data   RO          363    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz  drv_canfdspi_api.o
+    0x08002038   0x08002038   0x00000048   Data   RO          364    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal20MHz.12  drv_canfdspi_api.o
+    0x08002080   0x08002080   0x00000048   Data   RO          356    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz  drv_canfdspi_api.o
+    0x080020c8   0x080020c8   0x00000048   Data   RO          357    .rodata..Lswitch.table.DRV_CANFDSPI_BitTimeConfigureNominal40MHz.6  drv_canfdspi_api.o
+    0x08002110   0x08002110   0x0000001c   Data   RO          355    .rodata..Lswitch.table.DRV_CANFDSPI_DlcToDataBytes  drv_canfdspi_api.o
+    0x0800212c   0x0800212c   0x00000020   Data   RO          656    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002128, Size: 0x00000990, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002150, Size: 0x00000990, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08002128   0x00000004   Data   RW          630    .data               mc_w.l(rand.o)
-    0x20000004   0x0800212c   0x00000004   Data   RW           58    .data.delayCount    app.o
-    0x20000008        -       0x00000001   Zero   RW           63    .bss.appData        app.o
-    0x20000009   0x08002130   0x00000003   PAD
-    0x2000000c        -       0x00000004   Zero   RW           66    .bss.config         app.o
-    0x20000010        -       0x00000001   Zero   RW           77    .bss.errorFlags     app.o
-    0x20000011   0x08002130   0x00000003   PAD
-    0x20000014        -       0x00000004   Zero   RW           69    .bss.fObj           app.o
-    0x20000018        -       0x00000001   Zero   RW           61    .bss.i              app.o
-    0x20000019        -       0x00000001   Zero   RW           62    .bss.lastSwitchState  app.o
-    0x2000001a        -       0x00000001   Zero   RW           59    .bss.ledCount       app.o
-    0x2000001b        -       0x00000001   Zero   RW           60    .bss.ledState       app.o
-    0x2000001c        -       0x00000004   Zero   RW           70    .bss.mObj           app.o
-    0x20000020        -       0x00000006   Zero   RW           73    .bss.payload        app.o
-    0x20000026        -       0x00000001   Zero   RW           76    .bss.rec            app.o
-    0x20000027   0x08002130   0x00000001   PAD
-    0x20000028        -       0x00000004   Zero   RW           68    .bss.rxConfig       app.o
-    0x2000002c        -       0x0000000c   Zero   RW           71    .bss.rxObj          app.o
-    0x20000038        -       0x00000040   Zero   RW           72    .bss.rxd            app.o
-    0x20000078        -       0x00000060   Zero   RW          353    .bss.spiReceiveBuffer  drv_canfdspi_api.o
-    0x200000d8        -       0x00000060   Zero   RW          352    .bss.spiTransmitBuffer  drv_canfdspi_api.o
-    0x20000138        -       0x00000001   Zero   RW           75    .bss.tec            app.o
-    0x20000139   0x08002130   0x00000003   PAD
-    0x2000013c        -       0x00000004   Zero   RW           67    .bss.txConfig       app.o
-    0x20000140        -       0x00000001   Zero   RW           74    .bss.txFlags        app.o
-    0x20000141   0x08002130   0x00000003   PAD
-    0x20000144        -       0x0000000c   Zero   RW           64    .bss.txObj          app.o
-    0x20000150        -       0x00000040   Zero   RW           65    .bss.txd            app.o
+    0x20000000   0x08002150   0x00000004   Data   RW          631    .data               mc_w.l(rand.o)
+    0x20000004   0x08002154   0x00000004   Data   RW           59    .data.delayCount    app.o
+    0x20000008        -       0x00000001   Zero   RW           64    .bss.appData        app.o
+    0x20000009   0x08002158   0x00000003   PAD
+    0x2000000c        -       0x00000004   Zero   RW           67    .bss.config         app.o
+    0x20000010        -       0x00000001   Zero   RW           78    .bss.errorFlags     app.o
+    0x20000011   0x08002158   0x00000003   PAD
+    0x20000014        -       0x00000004   Zero   RW           70    .bss.fObj           app.o
+    0x20000018        -       0x00000001   Zero   RW           62    .bss.i              app.o
+    0x20000019        -       0x00000001   Zero   RW           63    .bss.lastSwitchState  app.o
+    0x2000001a        -       0x00000001   Zero   RW           60    .bss.ledCount       app.o
+    0x2000001b        -       0x00000001   Zero   RW           61    .bss.ledState       app.o
+    0x2000001c        -       0x00000004   Zero   RW           71    .bss.mObj           app.o
+    0x20000020        -       0x00000006   Zero   RW           74    .bss.payload        app.o
+    0x20000026        -       0x00000001   Zero   RW           77    .bss.rec            app.o
+    0x20000027   0x08002158   0x00000001   PAD
+    0x20000028        -       0x00000004   Zero   RW           69    .bss.rxConfig       app.o
+    0x2000002c        -       0x0000000c   Zero   RW           72    .bss.rxObj          app.o
+    0x20000038        -       0x00000040   Zero   RW           73    .bss.rxd            app.o
+    0x20000078        -       0x00000060   Zero   RW          354    .bss.spiReceiveBuffer  drv_canfdspi_api.o
+    0x200000d8        -       0x00000060   Zero   RW          353    .bss.spiTransmitBuffer  drv_canfdspi_api.o
+    0x20000138        -       0x00000001   Zero   RW           76    .bss.tec            app.o
+    0x20000139   0x08002158   0x00000003   PAD
+    0x2000013c        -       0x00000004   Zero   RW           68    .bss.txConfig       app.o
+    0x20000140        -       0x00000001   Zero   RW           75    .bss.txFlags        app.o
+    0x20000141   0x08002158   0x00000003   PAD
+    0x20000144        -       0x0000000c   Zero   RW           65    .bss.txObj          app.o
+    0x20000150        -       0x00000040   Zero   RW           66    .bss.txd            app.o
     0x20000190        -       0x00000800   Zero   RW           15    STACK               startup_stm32f10x_cl.o
 
 
@@ -1745,10 +1743,10 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      2028         10          0          4        187      15818   app.o
+      2064         10          0          4        187      16195   app.o
       3672         18       1108          0        192     115603   drv_canfdspi_api.o
        230          0          0          0          0       3754   drv_spi.o
-        10          0          0          0          0        433   main.o
+        10          0          0          0          0        487   main.o
         36          8        336          0       2048        968   startup_stm32f10x_cl.o
        332          0          0          0          0       6117   stm32f10x_gpio.o
         24          0          0          0          0      10419   stm32f10x_rcc.o
@@ -1756,7 +1754,7 @@ Image component sizes
        336          0          0          0          0       3148   system_stm32f10x.o
 
     ----------------------------------------------------------------------
-      6818         36       1476          4       2440     164168   Object Totals
+      6854         36       1476          4       2440     164599   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         42          0          0          0         13          0   (incl. Padding)
 
@@ -1798,15 +1796,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      7012         62       1476          8       2440     164508   Grand Totals
-      7012         62       1476          8       2440     164508   ELF Image Totals
-      7012         62       1476          8          0          0   ROM Totals
+      7048         62       1476          8       2440     164939   Grand Totals
+      7048         62       1476          8       2440     164939   ELF Image Totals
+      7048         62       1476          8          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 8488 (   8.29kB)
+    Total RO  Size (Code + RO Data)                 8524 (   8.32kB)
     Total RW  Size (RW Data + ZI Data)              2448 (   2.39kB)
-    Total ROM Size (Code + RO Data + RW Data)       8496 (   8.30kB)
+    Total ROM Size (Code + RO Data + RW Data)       8532 (   8.33kB)
 
 ==============================================================================
 

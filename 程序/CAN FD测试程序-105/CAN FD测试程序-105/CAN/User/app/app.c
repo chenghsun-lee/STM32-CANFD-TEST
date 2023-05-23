@@ -45,6 +45,8 @@ DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 #include "stdio.h"
 
 
+
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
@@ -539,31 +541,44 @@ void APP_TransmitMessageQueue(void)
 void APP_TransmitSwitchState(void)
 {
     APP_SwitchState newSwitchState;
-
+		int a =5;
     // Check if switch has changed
     Nop();
     newSwitchState.S1 = APP_S1_READ();
 
     bool switchChanged = newSwitchState.S1 != lastSwitchState.S1;
 
-		
+
+
     if (1) {
 		//if (switchChanged) {
         // Transmit new state
-        txObj.bF.id.SID = BUTTON_STATUS_ID;
+				a=20;
+				while(a<30)
+        {
+					
+				txObj.bF.id.SID = BUTTON_STATUS_ID;
 
         txObj.bF.ctrl.DLC = CAN_DLC_1;
         txObj.bF.ctrl.IDE = 0;
         txObj.bF.ctrl.BRS = 1;
         txObj.bF.ctrl.FDF = 1;
-
-        txd[0] = 64;
-        if (newSwitchState.S1 == APP_SWITCH_PRESSED) txd[0] += 0x1;
-
+				
+        txd[0] = a;
+				a=(a+1)%10+20;
+        if (newSwitchState.S1 == APP_SWITCH_PRESSED) txd[0] += 0x10 ;
+				
+				for(int i=0;i<1000000;i++){
+						Nop();
+						Nop();
+					}
         APP_TransmitMessageQueue();
+				//txd[0] = 64;
+				//APP_TransmitMessageQueue();
+				}
     }
-
     lastSwitchState.S1 = newSwitchState.S1;
+
 }
 
 void APP_PayLoad_Tasks(void)

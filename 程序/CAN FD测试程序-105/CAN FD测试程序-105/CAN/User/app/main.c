@@ -47,15 +47,21 @@ DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 
 int main (void)
 {
+	
 	// Initialize system clock and board
 //	sysclk_init();
 //	board_init();
 
 	// Initialize application
 	APP_Initialize();
-
+	int i=0;
 	/* Insert application code here, after the board has been initialized. */
 	while (1) {
-		APP_Tasks();
+		//if(i==1000){
+			APP_Tasks();
+		//	i++;
+		//}
+		//else 
+		//	i=(i+1)%1001;
 	}
 }
